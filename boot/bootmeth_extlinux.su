@@ -1,0 +1,7 @@
+boot/bootmeth_extlinux.c:58:12:extlinux_get_state_desc	0	static
+boot/bootmeth_extlinux.c:201:12:extlinux_set_property	16	static
+boot/bootmeth_extlinux.c:174:12:extlinux_boot	104	static
+boot/bootmeth_extlinux.c:71:12:extlinux_getfile	24	static
+boot/bootmeth_extlinux.c:233:12:extlinux_bootmeth_bind	8	static
+boot/bootmeth_extlinux.c:134:12:extlinux_read_bootflow	264	static
+boot/bootmeth_extlinux.c:90:12:extlinux_check	0	static

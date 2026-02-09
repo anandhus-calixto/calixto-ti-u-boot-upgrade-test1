@@ -1,0 +1,4 @@
+lib/rsa/rsa-mod-exp.c:44:13:subtract_modulus	12	static
+lib/rsa/rsa-mod-exp.c:123:13:montgomery_mul	40	static
+lib/rsa/rsa-mod-exp.c:249:13:rsa_convert_big_endian	0	static
+lib/rsa/rsa-mod-exp.c:257:5:rsa_mod_exp_sw	96	dynamic

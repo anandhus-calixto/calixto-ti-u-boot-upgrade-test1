@@ -1,0 +1,2 @@
+cmd/elf.c:25:5:do_bootelf	32	static
+cmd/elf.c:111:5:do_bootvx	152	static

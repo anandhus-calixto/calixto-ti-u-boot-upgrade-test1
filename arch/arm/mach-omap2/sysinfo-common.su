@@ -1,0 +1,1 @@
+arch/arm/mach-omap2/sysinfo-common.c:16:5:get_device_type	0	static

@@ -1,0 +1,10 @@
+drivers/usb/musb-new/musb_host.c:90:13:musb_h_tx_flush_fifo	24	static
+drivers/usb/musb-new/musb_host.c:114:13:musb_h_ep0_flush_fifo	24	static
+drivers/usb/musb-new/musb_host.c:427:12:musb_h_flush_rxfifo.isra	0	static
+drivers/usb/musb-new/musb_host.c:189:1:musb_start_urb	72	static
+drivers/usb/musb-new/musb_host.c:340:13:musb_advance_schedule	32	static
+drivers/usb/musb-new/musb_host.c:964:13:musb_h_ep0_irq	32	static
+drivers/usb/musb-new/musb_host.c:1101:6:musb_host_tx	48	static
+drivers/usb/musb-new/musb_host.c:1429:6:musb_host_rx	40	static
+drivers/usb/musb-new/musb_host.c:1910:5:musb_urb_enqueue	72	static
+drivers/usb/musb-new/musb_host.c:2180:5:musb_urb_dequeue	24	static

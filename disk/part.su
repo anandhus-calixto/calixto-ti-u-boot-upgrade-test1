@@ -1,0 +1,16 @@
+disk/part.c:35:28:part_driver_get_type	0	static
+disk/part.c:67:28:part_driver_lookup_type	16	static
+disk/part.c:92:5:part_get_type_by_name	16	static
+disk/part.c:141:18:blk_get_dev	8	static
+disk/part.c:175:6:dev_print	48	static
+disk/part.c:279:6:part_init	24	static
+disk/part.c:321:6:part_print	16	static
+disk/part.c:338:5:part_get_info_by_type	16	static
+disk/part.c:373:5:part_get_info	0	static
+disk/part.c:379:5:part_get_info_whole_disk	16	static
+disk/part.c:394:5:blk_get_device_by_str	40	static
+disk/part.c:455:5:blk_get_device_part_str	168	static
+disk/part.c:666:5:part_get_info_by_name	32	static
+disk/part.c:753:5:part_get_info_by_dev_and_name_or_num	40	static
+disk/part.c:778:6:part_set_generic_name	24	static
+disk/part.c:805:5:part_get_bootable	136	static

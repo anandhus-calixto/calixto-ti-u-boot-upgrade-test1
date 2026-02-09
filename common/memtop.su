@@ -1,0 +1,2 @@
+common/memtop.c:24:13:add_mem_region	20	static
+common/memtop.c:154:13:get_mem_top	336	static

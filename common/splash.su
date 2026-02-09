@@ -1,0 +1,3 @@
+common/splash.c:91:12:splash_screen_prepare	0	static
+common/splash.c:100:6:splash_get_pos	0	static
+common/splash.c:161:5:splash_display	0	static

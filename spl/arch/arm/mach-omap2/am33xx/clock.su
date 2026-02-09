@@ -1,0 +1,7 @@
+arch/arm/mach-omap2/am33xx/clock.c:74:6:do_setup_dpll	16	static
+arch/arm/mach-omap2/am33xx/clock.c:190:6:do_enable_clocks	24	static
+arch/arm/mach-omap2/am33xx/clock.c:210:6:do_disable_clocks	32	static
+arch/arm/mach-omap2/am33xx/clock.c:233:13:scale_vcores	0	static
+arch/arm/mach-omap2/am33xx/clock.c:237:6:setup_early_clocks	8	static
+arch/arm/mach-omap2/am33xx/clock.c:244:6:prcm_init	8	static
+arch/arm/mach-omap2/am33xx/clock.c:250:6:rtc_only_prcm_init	8	static

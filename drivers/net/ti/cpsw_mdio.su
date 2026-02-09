@@ -1,0 +1,12 @@
+drivers/net/ti/cpsw_mdio.c:166:13:cpsw_mdio_sw_clr_bit	0	static
+drivers/net/ti/cpsw_mdio.c:348:12:cpsw_mdio_wait_for_user_access.isra	16	static
+drivers/net/ti/cpsw_mdio.c:381:12:cpsw_mdio_write	24	static
+drivers/net/ti/cpsw_mdio.c:355:12:cpsw_mdio_read	16	static
+drivers/net/ti/cpsw_mdio.c:201:13:cpsw_mdio_toggle_man_bit.constprop	8	static
+drivers/net/ti/cpsw_mdio.c:208:13:cpsw_mdio_man_send_pattern	16	static
+drivers/net/ti/cpsw_mdio.c:223:13:cpsw_mdio_sw_preamble	16	static
+drivers/net/ti/cpsw_mdio.c:248:12:cpsw_mdio_sw_read	24	static
+drivers/net/ti/cpsw_mdio.c:305:12:cpsw_mdio_sw_write	24	static
+drivers/net/ti/cpsw_mdio.c:404:5:cpsw_mdio_get_alive	0	static
+drivers/net/ti/cpsw_mdio.c:413:17:cpsw_mdio_init	32	static
+drivers/net/ti/cpsw_mdio.c:470:6:cpsw_mdio_free	16	static

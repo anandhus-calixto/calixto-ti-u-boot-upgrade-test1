@@ -1,0 +1,9 @@
+drivers/usb/musb-new/musb_core.c:1185:1:fifo_setup	24	static
+drivers/usb/musb-new/musb_core.c:971:13:musb_generic_disable.isra	0	static
+drivers/usb/musb-new/musb_core.c:221:6:musb_write_fifo	12	static
+drivers/usb/musb-new/musb_core.c:263:6:musb_read_fifo	12	static
+drivers/usb/musb-new/musb_core.c:324:6:musb_load_testpacket	8	static
+drivers/usb/musb-new/musb_core.c:904:5:musb_start	16	static
+drivers/usb/musb-new/musb_core.c:998:6:musb_stop	8	static
+drivers/usb/musb-new/musb_core.c:1556:13:musb_interrupt	32	static
+drivers/usb/musb-new/musb_core.c:1919:1:musb_init_controller	176	static

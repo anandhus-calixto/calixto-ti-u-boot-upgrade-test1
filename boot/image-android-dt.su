@@ -1,0 +1,3 @@
+boot/image-android-dt.c:18:6:android_dt_check_header	0	static
+boot/image-android-dt.c:40:6:android_dt_get_fdt_by_index	24	static
+boot/image-android-dt.c:102:6:android_dt_print_contents	40	static

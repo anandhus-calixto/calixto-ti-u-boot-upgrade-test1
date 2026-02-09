@@ -1,0 +1,8 @@
+arch/arm/mach-omap2/am33xx/sys_info.c:27:5:get_cpu_rev	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:41:5:get_cpu_type	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:55:5:get_sysboot_value	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:60:5:get_sys_clk_index	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:97:5:print_cpuinfo	16	static
+arch/arm/mach-omap2/am33xx/sys_info.c:135:5:am335x_get_efuse_mpu_max_freq	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:192:5:am335x_get_tps65910_mpu_vdd	0	static
+arch/arm/mach-omap2/am33xx/sys_info.c:176:5:am335x_get_mpu_vdd	8	static

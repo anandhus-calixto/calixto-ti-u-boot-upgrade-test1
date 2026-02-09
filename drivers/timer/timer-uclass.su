@@ -1,6 +1,0 @@
-drivers/timer/timer-uclass.c:80:12:timer_post_probe	8	static
-drivers/timer/timer-uclass.c:51:12:timer_pre_probe	48	static
-drivers/timer/timer-uclass.c:33:13:timer_get_count	8	static
-drivers/timer/timer-uclass.c:44:23:timer_get_rate	8	static
-drivers/timer/timer-uclass.c:116:5:timer_conv_64	0	static
-drivers/timer/timer-uclass.c:125:5:dm_timer_init	32	static

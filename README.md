@@ -1,1 +1,0 @@
-# calixto-ti-u-boot-upgrade-test1

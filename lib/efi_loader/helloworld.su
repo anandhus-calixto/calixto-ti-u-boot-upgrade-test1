@@ -1,3 +1,0 @@
-lib/efi_loader/helloworld.c:42:13:uint2dec	20	static
-lib/efi_loader/helloworld.c:187:14:print_device_path	16	static
-lib/efi_loader/helloworld.c:221:21:efi_main	88	static

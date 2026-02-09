@@ -1,3 +1,0 @@
-arch/arm/mach-omap2/mem-common.c:67:6:enable_gpmc_cs_config	24	static
-arch/arm/mach-omap2/mem-common.c:85:6:set_gpmc_cs0	0	static
-arch/arm/mach-omap2/mem-common.c:165:6:gpmc_init	0	static

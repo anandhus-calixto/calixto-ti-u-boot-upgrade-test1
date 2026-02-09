@@ -1,3 +1,0 @@
-cmd/bootflow.c:609:1:complete_bootflow	24	static
-cmd/bootflow.c:129:12:do_bootflow_scan	272	static
-cmd/bootflow.c:609:1:do_bootflow	24	static

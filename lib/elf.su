@@ -1,7 +1,0 @@
-lib/elf.c:26:15:bootelf_exec	0	static
-lib/elf.c:79:15:load_elf64_image_phdr	32	static
-lib/elf.c:123:15:load_elf64_image_shdr	16	static
-lib/elf.c:194:15:load_elf_image_phdr	24	static
-lib/elf.c:229:15:load_elf_image_shdr	24	static
-lib/elf.c:288:5:valid_elf_image	8	static
-lib/elf.c:45:15:bootelf	32	static

@@ -1,4 +1,0 @@
-cmd/fdt.c:899:12:is_printable_string.part.0	12	static
-cmd/fdt.c:934:13:print_data.part.0	32	static
-cmd/fdt.c:47:6:set_working_fdt_addr	8	static
-cmd/fdt.c:147:12:do_fdt	104	static

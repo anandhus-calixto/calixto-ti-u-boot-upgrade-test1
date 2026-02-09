@@ -1,4 +1,0 @@
-arch/arm/cpu/armv7/cpu.c:25:13:cpu_cache_initialization	0	static
-arch/arm/cpu/armv7/cpu.c:27:5:cleanup_before_linux_select	8	static
-arch/arm/cpu/armv7/cpu.c:81:5:cleanup_before_linux	0	static
-arch/arm/cpu/armv7/cpu.c:86:6:allow_unaligned	0	static

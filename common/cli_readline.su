@@ -1,6 +1,0 @@
-common/cli_readline.c:28:14:delete_char	24	static
-common/cli_readline.c:186:6:cread_print_hist_list	24	static
-common/cli_readline.c:271:5:cread_line_process_ch	32	static
-common/cli_readline.c:442:6:cli_cread_init	32	static
-common/cli_readline.c:646:5:cli_readline_into_buffer	88	static
-common/cli_readline.c:526:5:cli_readline	0	static

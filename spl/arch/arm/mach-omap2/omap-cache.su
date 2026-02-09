@@ -1,2 +1,0 @@
-arch/arm/mach-omap2/omap-cache.c:44:6:enable_caches	8	static
-arch/arm/mach-omap2/omap-cache.c:54:6:dram_bank_mmu_setup	16	static

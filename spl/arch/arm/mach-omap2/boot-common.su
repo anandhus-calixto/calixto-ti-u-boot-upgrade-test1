@@ -1,8 +1,0 @@
-arch/arm/mach-omap2/boot-common.c:33:12:omap_sys_boot_device	0	static
-arch/arm/mach-omap2/boot-common.c:38:6:save_omap_boot_params	16	static
-arch/arm/mach-omap2/boot-common.c:177:5:spl_boot_device	0	static
-arch/arm/mach-omap2/boot-common.c:182:5:spl_mmc_boot_mode	0	static
-arch/arm/mach-omap2/boot-common.c:187:5:load_firmware	0	static
-arch/arm/mach-omap2/boot-common.c:206:6:spl_boot_ipu	0	static
-arch/arm/mach-omap2/boot-common.c:272:6:spl_soc_init	8	static
-arch/arm/mach-omap2/boot-common.c:294:17:jump_to_image_no_args	8	static

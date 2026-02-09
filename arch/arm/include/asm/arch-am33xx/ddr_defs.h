@@ -186,6 +186,36 @@
 #define  DDR3_DATA2_IOCTRL_VALUE   0x84
 #define  DDR3_DATA3_IOCTRL_VALUE   0x84
 
+/* Calixto Configuration */
+#define CALIXTO_DDR3_RATIO                      0x100
+#define CALIXTO_DDR3_INVERT_CLKOUT              0x1
+#define CALIXTO_DDR3_RD_DQS                     0x03B
+#define CALIXTO_DDR3_WR_DQS                     0xCD
+#define CALIXTO_DDR3_PHY_FIFO_WE                0x102
+#define CALIXTO_DDR3_PHY_WR_DATA                0x107
+#define CALIXTO_DDR3_IOCTRL_VALUE               0x18B
+
+
+/* Micron/Hynix DDR3 512MB on CalixtoSOM */
+#define CALIXTO512_DDR3_EMIF_READ_LATENCY       0x07
+#define CALIXTO512_DDR3_EMIF_TIM1               0x0AAAD4DB
+#define CALIXTO512_DDR3_EMIF_TIM2               0x266B7FDA
+#define CALIXTO512_DDR3_EMIF_TIM3               0x501F867F
+#define CALIXTO512_DDR3_EMIF_SDCFG              0x61C05332
+#define CALIXTO512_DDR3_EMIF_SDREF              0x0000093B
+#define CALIXTO512_DDR3_ZQ_CFG                  0x50074BE4
+
+/* Micron/Hynix DDR3 256MB on CalixtoSOM */
+#define CALIXTO256_DDR3_EMIF_READ_LATENCY       0x07
+#define CALIXTO256_DDR3_EMIF_TIM1               0x0AAAD4DB
+#define CALIXTO256_DDR3_EMIF_TIM2               0x26377FDA
+#define CALIXTO256_DDR3_EMIF_TIM3               0x501F833F
+#define CALIXTO256_DDR3_EMIF_SDCFG              0x61C052B2
+#define CALIXTO256_DDR3_EMIF_SDREF              0x0000093B
+#define CALIXTO256_DDR3_ZQ_CFG                  0x50074BE4
+
+
+
 /**
  * Configure DMM
  */

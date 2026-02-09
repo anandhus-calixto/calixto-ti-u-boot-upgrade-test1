@@ -29,8 +29,7 @@
 #define V_OSCK				24000000  /* Clock output from T2 */
 #define V_SCLK				(V_OSCK)
 
-/* Always 128 KiB env size */
-#define CONFIG_ENV_SIZE			SZ_128K
+
 
 #define BOOTENV_DEV_LEGACY_MMC(devtypeu, devtypel, instance) \
 	"bootcmd_" #devtypel #instance "=" \
@@ -183,9 +182,7 @@
 #define CFG_SYS_NAND_ECCSIZE		512
 #define CFG_SYS_NAND_ECCBYTES	14
 /* NAND: SPL related configs */
-#ifdef CONFIG_SPL_OS_BOOT
-#define CONFIG_SYS_NAND_SPL_KERNEL_OFFS	0x00200000 /* kernel offset */
-#endif
+
 #endif /* !CONFIG_NAND */
 
 /*

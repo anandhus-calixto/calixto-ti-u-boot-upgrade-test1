@@ -142,7 +142,7 @@ const struct dpll_params *get_dpll_ddr_params(void)
 const struct dpll_params *get_dpll_mpu_params(void)
 {
 	int ind = get_sys_clk_index();
-	int freq = am335x_get_efuse_mpu_max_freq(cdev);
+	//int freq = am335x_get_efuse_mpu_max_freq(cdev);
 	
 	return &dpll_mpu_opp[ind][3];
 }
@@ -187,7 +187,7 @@ void sdram_init(void)
    #endif
 }
 #endif
-
+/*
 #if defined(CONFIG_CLOCK_SYNTHESIZER) && (!defined(CONFIG_XPL_BUILD) || \
 	(defined(CONFIG_SPL_ETH) && defined(CONFIG_XPL_BUILD)))
 static void request_and_set_gpio(int gpio, char *name, int val)
@@ -216,13 +216,15 @@ err_free_gpio:
 
 #define REQUEST_AND_SET_GPIO(N)	request_and_set_gpio(N, #N, 1);
 #define REQUEST_AND_CLR_GPIO(N)	request_and_set_gpio(N, #N, 0);
-
+*/
 /**
  * RMII mode on ICEv2 board needs 50MHz clock. Given the clock
  * synthesizer With a capacitor of 18pF, and 25MHz input clock cycle
  * PLL1 gives an output of 100MHz. So, configuring the div2/3 as 2 to
  * give 50MHz output for Eth0 and 1.
  */
+
+/*
 static struct clk_synth cdce913_data = {
 	.id = 0x81,
 	.capacitor = 0x90,
@@ -230,8 +232,10 @@ static struct clk_synth cdce913_data = {
 	.pdiv2 = 0x2,
 	.pdiv3 = 0x2,
 };
-#endif
 
+
+#endif
+*/
 #if defined(CONFIG_OF_BOARD_SETUP) && defined(CONFIG_OF_CONTROL) && \
 	defined(CONFIG_DM_ETH) && defined(CONFIG_DRIVER_TI_CPSW)
 
@@ -303,7 +307,7 @@ int ft_board_setup(void *fdt, struct bd_info *bd)
 		}
 	}
 
-done:
+//done:
 	return 0;
 }
 
@@ -340,7 +344,7 @@ int board_late_init(void)
 #endif
 
 #ifdef CONFIG_ENV_VARS_UBOOT_RUNTIME_CONFIG
-	char *name = NULL;
+//	char *name = NULL;
 
 
 

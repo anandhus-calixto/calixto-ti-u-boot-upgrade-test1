@@ -1,0 +1,1 @@
+cmd_spl/drivers/usb/common/built-in.o :=  rm -f spl/drivers/usb/common/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/drivers/usb/common/built-in.o spl/drivers/usb/common/common.o spl/drivers/usb/common/usb_urb.o

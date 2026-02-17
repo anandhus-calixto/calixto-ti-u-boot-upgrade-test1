@@ -1,0 +1,6 @@
+drivers/mtd/nand/raw/nand_macronix.c:32:12:macronix_30lfxg18ac_get_otp_info	0	static
+drivers/mtd/nand/raw/nand_macronix.c:154:12:macronix_30lfxg18ac_lock_otp	0	static
+drivers/mtd/nand/raw/nand_macronix.c:189:12:macronix_nand_init	16	static
+drivers/mtd/nand/raw/nand_macronix.c:77:12:__macronix_30lfxg18ac_rw_otp	48	static
+drivers/mtd/nand/raw/nand_macronix.c:139:12:macronix_30lfxg18ac_write_otp	24	static
+drivers/mtd/nand/raw/nand_macronix.c:147:12:macronix_30lfxg18ac_read_otp	24	static

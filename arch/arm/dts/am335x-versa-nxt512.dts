@@ -11,7 +11,7 @@
 #include <dt-bindings/interrupt-controller/irq.h>
 
 / {
-	model = "CALIXTO AM335x VERSA-NXT";
+	model = "CALIXTO AM335x VERSA-NXT_UBOOT";
 	compatible = "calixto,am335x-versa-nxt", "ti,am33xx";
 
 	chosen {
@@ -25,12 +25,16 @@
 		};
 	};
 
-	memory {
+	memory@80000000 {
 		device_type = "memory";
 		reg = <0x80000000 0x20000000>; /* 512 MB */
 	};
+	
+	chosen {
+		stdout-path = &uart0;
+	};
 
-	vbat: fixedregulator@0 {
+	vbat: fixedregulator0 {
 		compatible = "regulator-fixed";
 		regulator-name = "vbat";
 		regulator-min-microvolt = <3000000>;
@@ -38,7 +42,7 @@
 		regulator-boot-on;
 	};
 		
-	vdd_mpu_supply: fixedregulator@1 {
+	vdd_mpu_supply: fixedregulator1 {
 		compatible = "regulator-fixed";
 		regulator-name = "vdd-mpu-regulator";
 		regulator-min-microvolt = <1262000>;
@@ -47,7 +51,7 @@
 		regulator-always-on;
 	};
 	
-	vmmcsd_supply: fixedregulator@2 {
+	vmmcsd_supply: fixedregulator2 {
 		compatible = "regulator-fixed";
 		regulator-name = "vdd-mpu-regulator";
 		regulator-min-microvolt = <3300000>;
@@ -60,7 +64,7 @@
 
 &am33xx_pinmux {
 	pinctrl-names = "default";
-	pinctrl-0 = <&clkout2_pin>;
+
 
 	uart0_pins: pinmux_uart0_pins {
 		pinctrl-single,pins = <
@@ -69,12 +73,6 @@
 		>;
 	};
 
-
-	clkout2_pin: pinmux_clkout2_pin {
-		pinctrl-single,pins = <
-			0x1b4 (PIN_OUTPUT_PULLDOWN | MUX_MODE3)	/* xdma_event_intr1.clkout2 */
-		>;
-	};
 
 	cpsw_default: cpsw_default {
 		pinctrl-single,pins = <
@@ -164,6 +162,16 @@
 	status = "okay";
 };
 
+
+&mmc1 {
+	status = "okay";
+	vmmc-supply = <&vmmcsd_supply>;
+	bus-width = <4>;
+	pinctrl-names = "default";
+	pinctrl-0 = <&mmc1_pins>;
+	cd-gpios = <&gpio3 14 GPIO_ACTIVE_HIGH>;
+};
+
 &davinci_mdio {
 	pinctrl-names = "default", "sleep";
 	pinctrl-0 = <&davinci_mdio_default>;
@@ -181,15 +189,6 @@
 	phy-mode = "rgmii-txid";
 };
 
-&mmc1 {
-	status = "okay";
-	vmmc-supply = <&vmmcsd_supply>;
-	bus-width = <4>;
-	pinctrl-names = "default";
-	pinctrl-0 = <&mmc1_pins>;
-	cd-gpios = <&gpio3 14 GPIO_ACTIVE_HIGH>;
-};
-
 &edma {
 	ti,edma-xbar-event-map = /bits/ 16 <1 12
 					    2 13>;
@@ -202,4 +201,9 @@
 &aes {
 	status = "okay";
 };
+
+&rtc {
+	status = "disabled";
+};
+
 

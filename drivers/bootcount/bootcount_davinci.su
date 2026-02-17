@@ -1,0 +1,2 @@
+drivers/bootcount/bootcount_davinci.c:14:6:bootcount_store	0	static
+drivers/bootcount/bootcount_davinci.c:30:7:bootcount_load	0	static

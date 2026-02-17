@@ -1,0 +1,2 @@
+arch/arm/mach-omap2/am33xx/clk_synthesizer.c:65:12:clk_synthesizer_reg_write	24	static
+arch/arm/mach-omap2/am33xx/clk_synthesizer.c:93:5:setup_clock_synthesizer	24	static

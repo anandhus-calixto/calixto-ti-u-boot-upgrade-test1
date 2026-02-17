@@ -1,0 +1,10 @@
+drivers/usb/musb-new/ti-musb.c:35:13:ti_musb_set_phy_power	8	static
+drivers/usb/musb-new/ti-musb.c:81:12:ti_musb_of_to_plat	112	static
+drivers/usb/musb-new/ti-musb.c:180:12:ti_musb_host_of_to_plat	16	static
+drivers/usb/musb-new/ti-musb.c:218:12:ti_musb_peripheral_of_to_plat	16	static
+drivers/usb/musb-new/ti-musb.c:263:12:ti_musb_gadget_handle_interrupts	8	static
+drivers/usb/musb-new/ti-musb.c:169:12:ti_musb_host_remove	8	static
+drivers/usb/musb-new/ti-musb.c:148:12:ti_musb_host_probe	24	static
+drivers/usb/musb-new/ti-musb.c:253:12:ti_musb_peripheral_remove	8	static
+drivers/usb/musb-new/ti-musb.c:236:12:ti_musb_peripheral_probe	16	static
+drivers/usb/musb-new/ti-musb.c:292:12:ti_musb_wrapper_bind	40	static

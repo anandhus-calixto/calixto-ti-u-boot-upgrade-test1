@@ -1,0 +1,1 @@
+cmd_spl/drivers/mmc/built-in.o :=  rm -f spl/drivers/mmc/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/drivers/mmc/built-in.o spl/drivers/mmc/mmc.o spl/drivers/mmc/mmc-uclass.o spl/drivers/mmc/omap_hsmmc.o

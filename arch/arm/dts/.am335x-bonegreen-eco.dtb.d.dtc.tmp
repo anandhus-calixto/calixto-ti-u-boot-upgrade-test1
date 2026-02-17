@@ -1,0 +1,1 @@
+arch/arm/dts/am335x-bonegreen-eco.dtb: arch/arm/dts/.am335x-bonegreen-eco.dtb.dts.tmp arch/arm/dts/tps65217.dtsi

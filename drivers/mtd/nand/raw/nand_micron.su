@@ -1,0 +1,2 @@
+drivers/mtd/nand/raw/nand_micron.c:41:12:micron_nand_setup_read_retry	24	static
+drivers/mtd/nand/raw/nand_micron.c:70:12:micron_nand_init	0	static

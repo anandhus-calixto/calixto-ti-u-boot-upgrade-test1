@@ -1,0 +1,7 @@
+drivers/dfu/dfu_nand.c:121:5:dfu_get_medium_size_nand	0	static
+drivers/dfu/dfu_nand.c:184:14:dfu_polltimeout_nand	0	static
+drivers/dfu/dfu_nand.c:145:12:dfu_flush_medium_nand	64	static
+drivers/dfu/dfu_nand.c:21:12:nand_block_op.part.0.isra	112	static
+drivers/dfu/dfu_nand.c:104:12:dfu_write_medium_nand	16	static
+drivers/dfu/dfu_nand.c:128:12:dfu_read_medium_nand	16	static
+drivers/dfu/dfu_nand.c:196:5:dfu_fill_entity_nand	80	static

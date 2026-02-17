@@ -1,0 +1,4 @@
+common/spl/spl_nand.c:19:17:spl_nand_get_uboot_raw_page	0	static
+common/spl/spl_nand.c:78:12:spl_nand_load_image	48	static
+common/spl/spl_nand.c:45:12:nand_spl_adjust_offset	0	static
+common/spl/spl_nand.c:50:14:spl_nand_read	24	static

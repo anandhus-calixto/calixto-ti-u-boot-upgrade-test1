@@ -1,0 +1,7 @@
+drivers/mtd/nand/raw/am335x_spl_bch.c:31:12:nand_command.isra	32	static
+drivers/mtd/nand/raw/am335x_spl_bch.c:129:12:nand_is_bad_block	8	static
+drivers/mtd/nand/raw/am335x_spl_bch.c:202:6:nand_init	16	static
+drivers/mtd/nand/raw/am335x_spl_bch.c:219:14:nand_page_size	0	static
+drivers/mtd/nand/raw/am335x_spl_bch.c:225:6:nand_deselect	0	static
+drivers/mtd/nand/raw/nand_spl_loaders.c:1:5:nand_spl_load_image	224	static
+drivers/mtd/nand/raw/nand_spl_loaders.c:56:5:nand_spl_adjust_offset	16	static

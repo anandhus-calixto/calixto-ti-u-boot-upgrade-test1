@@ -1,0 +1,3 @@
+arch/arm/mach-omap2/am33xx/mux.c:23:6:configure_module_pin_mux	0	static
+arch/arm/mach-omap2/am33xx/mux.c:37:13:set_uart_mux_conf	0	static
+arch/arm/mach-omap2/am33xx/mux.c:44:13:set_mux_conf_regs	0	static

@@ -1,0 +1,6 @@
+boot/bootmeth_efi_mgr.c:76:12:efi_mgr_read_file	0	static
+boot/bootmeth_efi_mgr.c:84:12:efi_mgr_boot	8	static
+boot/bootmeth_efi_mgr.c:36:12:efi_mgr_check	0	static
+boot/bootmeth_efi_mgr.c:94:12:bootmeth_efi_mgr_bind	8	static
+boot/bootmeth_efi_mgr.c:48:12:efi_mgr_read_bootflow	24	static
+boot/bootmeth_efi_mgr.c:29:6:sandbox_set_fake_efi_mgr_dev	8	static

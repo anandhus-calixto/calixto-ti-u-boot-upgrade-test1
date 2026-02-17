@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/built-in.o :=  rm -f drivers/net/phy/built-in.o; arm-linux-gnueabihf-ar cDPrsT drivers/net/phy/built-in.o drivers/net/phy/phy.o drivers/net/phy/atheros.o drivers/net/phy/smsc.o drivers/net/phy/dp83867.o

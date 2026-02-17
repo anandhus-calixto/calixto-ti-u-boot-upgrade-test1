@@ -1,0 +1,1 @@
+cmd_spl/board/calixto/am335x_versa_nxt512/built-in.o :=  rm -f spl/board/calixto/am335x_versa_nxt512/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/board/calixto/am335x_versa_nxt512/built-in.o spl/board/calixto/am335x_versa_nxt512/mux.o spl/board/calixto/am335x_versa_nxt512/board.o

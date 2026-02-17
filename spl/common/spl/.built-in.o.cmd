@@ -1,0 +1,1 @@
+cmd_spl/common/spl/built-in.o :=  rm -f spl/common/spl/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/common/spl/built-in.o spl/common/spl/spl.o spl/common/spl/spl_fit.o spl/common/spl/spl_ymodem.o spl/common/spl/spl_nand.o spl/common/spl/spl_mmc.o spl/common/spl/spl_fat.o spl/common/spl/spl_ext.o

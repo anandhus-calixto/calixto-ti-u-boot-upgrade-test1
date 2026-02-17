@@ -1,0 +1,2 @@
+drivers/net/ti/cpsw-common.c:48:6:ti_cm_get_macid	16	static
+drivers/net/ti/cpsw-common.c:57:5:ti_cm_get_macid_addr	32	static

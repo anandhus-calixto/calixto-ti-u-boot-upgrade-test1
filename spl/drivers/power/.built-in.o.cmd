@@ -1,0 +1,1 @@
+cmd_spl/drivers/power/built-in.o :=  rm -f spl/drivers/power/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/drivers/power/built-in.o spl/drivers/power/pmic/built-in.o spl/drivers/power/regulator/built-in.o

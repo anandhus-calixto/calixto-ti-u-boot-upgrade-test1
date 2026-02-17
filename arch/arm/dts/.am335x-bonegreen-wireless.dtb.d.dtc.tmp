@@ -1,0 +1,1 @@
+arch/arm/dts/am335x-bonegreen-wireless.dtb: arch/arm/dts/.am335x-bonegreen-wireless.dtb.dts.tmp arch/arm/dts/tps65217.dtsi

@@ -1,2 +1,0 @@
-board/calixto/am335x_versa_nxt512/mux.c:82:6:enable_uart0_pin_mux	0	static
-board/calixto/am335x_versa_nxt512/mux.c:87:6:enable_board_pin_mux	8	static

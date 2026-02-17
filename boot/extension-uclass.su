@@ -1,5 +1,0 @@
-boot/extension-uclass.c:17:15:extension_get_list	16	static
-boot/extension-uclass.c:27:5:extension_probe	8	static
-boot/extension-uclass.c:35:5:extension_remove	8	static
-boot/extension-uclass.c:43:5:extension_scan	24	static
-boot/extension-uclass.c:62:5:extension_apply	24	static

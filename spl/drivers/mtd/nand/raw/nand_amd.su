@@ -1,2 +1,0 @@
-drivers/mtd/nand/raw/nand_amd.c:41:12:amd_nand_init	0	static
-drivers/mtd/nand/raw/nand_amd.c:21:13:amd_nand_decode_id	8	static

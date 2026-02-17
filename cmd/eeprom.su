@@ -1,7 +1,0 @@
-cmd/eeprom.c:205:13:parse_numeric_param	16	static
-cmd/eeprom.c:146:12:eeprom_rw	48	static
-cmd/eeprom.c:43:12:eeprom_write_enable	0	static
-cmd/eeprom.c:48:6:eeprom_init	0	static
-cmd/eeprom.c:177:5:eeprom_read	16	static
-cmd/eeprom.c:187:5:eeprom_write	32	static
-cmd/eeprom.c:449:5:do_eeprom	40	static

@@ -1,4 +1,0 @@
-lib/efi_loader/efi_load_initrd.c:91:1:efi_load_file2_initrd	32	static
-lib/efi_loader/efi_load_initrd.c:194:14:efi_initrd_deregister	24	static
-lib/efi_loader/efi_load_initrd.c:220:20:efi_initrd_return_notify	8	static
-lib/efi_loader/efi_load_initrd.c:240:14:efi_initrd_register	32	static

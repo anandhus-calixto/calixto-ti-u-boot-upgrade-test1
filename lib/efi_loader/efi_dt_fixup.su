@@ -1,4 +1,0 @@
-lib/efi_loader/efi_dt_fixup.c:24:13:efi_reserve_memory	24	static
-lib/efi_loader/efi_dt_fixup.c:54:6:efi_try_purge_rng_seed	40	static
-lib/efi_loader/efi_dt_fixup.c:89:6:efi_carve_out_dt_rsv	72	static
-lib/efi_loader/efi_dt_fixup.c:146:1:efi_dt_fixup	224	static

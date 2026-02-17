@@ -1,7 +1,0 @@
-drivers/usb/common/usb_urb.c:52:13:usb_urb_complete	0	static
-drivers/usb/common/usb_urb.c:17:20:usb_dev_get_parent	16	static
-drivers/usb/common/usb_urb.c:61:6:usb_urb_fill	40	static
-drivers/usb/common/usb_urb.c:92:5:usb_urb_submit	24	static
-drivers/usb/common/usb_urb.c:120:5:usb_urb_submit_control	64	static
-drivers/usb/common/usb_urb.c:142:5:usb_urb_submit_bulk	40	static
-drivers/usb/common/usb_urb.c:152:5:usb_urb_submit_irq	40	static

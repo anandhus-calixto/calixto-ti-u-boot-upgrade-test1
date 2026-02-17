@@ -1,6 +1,0 @@
-disk/part_dos.c:63:12:test_block_type	16	static
-disk/part_dos.c:101:12:part_test_dos	16	dynamic
-disk/part_dos.c:202:12:part_get_info_extended.constprop	136	dynamic
-disk/part_dos.c:318:27:part_get_info_dos	16	static
-disk/part_dos.c:324:5:is_valid_dos_buf	8	static
-disk/part_dos.c:501:5:write_mbr_sector	16	static

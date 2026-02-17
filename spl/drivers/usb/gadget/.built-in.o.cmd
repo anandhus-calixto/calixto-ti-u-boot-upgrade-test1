@@ -1,1 +1,0 @@
-cmd_spl/drivers/usb/gadget/built-in.o :=  rm -f spl/drivers/usb/gadget/built-in.o; arm-linux-gnueabihf-ar cDPrsT spl/drivers/usb/gadget/built-in.o spl/drivers/usb/gadget/epautoconf.o spl/drivers/usb/gadget/config.o spl/drivers/usb/gadget/usbstring.o spl/drivers/usb/gadget/g_dnl.o

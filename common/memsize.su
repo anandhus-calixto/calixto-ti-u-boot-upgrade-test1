@@ -1,3 +1,0 @@
-common/memsize.c:32:13:dcache_flush_invalidate	16	static
-common/memsize.c:46:6:get_ram_size	168	static
-common/memsize.c:119:20:get_effective_memsize	0	static

@@ -1,8 +1,0 @@
-boot/bootstd-uclass.c:25:12:bootstd_of_to_plat	8	static
-boot/bootstd-uclass.c:116:12:bootstd_probe	8	static
-boot/bootstd-uclass.c:64:12:bootstd_remove	16	static
-boot/bootstd-uclass.c:75:26:bootstd_get_bootdev_order	16	static
-boot/bootstd-uclass.c:96:26:bootstd_get_prefixes	8	static
-boot/bootstd-uclass.c:103:5:bootstd_get_priv	24	static
-boot/bootstd-uclass.c:54:6:bootstd_clear_glob	24	static
-boot/bootstd-uclass.c:126:5:dm_scan_other	48	static

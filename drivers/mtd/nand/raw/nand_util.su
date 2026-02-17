@@ -1,6 +1,0 @@
-drivers/mtd/nand/raw/nand_util.c:411:12:check_skip_len.constprop	32	static
-drivers/mtd/nand/raw/nand_util.c:54:5:nand_erase_opts	184	static
-drivers/mtd/nand/raw/nand_util.c:480:5:nand_verify_page_oob	72	static
-drivers/mtd/nand/raw/nand_util.c:521:5:nand_verify	64	static
-drivers/mtd/nand/raw/nand_util.c:572:5:nand_write_skip_bad	64	static
-drivers/mtd/nand/raw/nand_util.c:706:5:nand_read_skip_bad	64	static

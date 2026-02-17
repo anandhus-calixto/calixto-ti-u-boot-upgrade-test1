@@ -1,3 +1,0 @@
-drivers/usb/gadget/udc/udc-uclass.c:21:5:dm_usb_gadget_handle_interrupts	0	static
-drivers/usb/gadget/udc/udc-uclass.c:34:5:udc_device_get_by_index	24	static
-drivers/usb/gadget/udc/udc-uclass.c:55:5:udc_device_put	0	static

@@ -1,2 +1,0 @@
-drivers/mtd/spi/sf_probe.c:122:19:spi_flash_probe	16	static
-drivers/mtd/spi/sf_probe.c:149:6:spi_flash_free	8	static

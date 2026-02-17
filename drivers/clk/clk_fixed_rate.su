@@ -1,5 +1,0 @@
-drivers/clk/clk_fixed_rate.c:23:12:dummy_enable	0	static
-drivers/clk/clk_fixed_rate.c:50:14:clk_fixed_rate_raw_get_rate	0	static
-drivers/clk/clk_fixed_rate.c:17:14:clk_fixed_rate_get_rate	8	static
-drivers/clk/clk_fixed_rate.c:34:6:clk_fixed_rate_ofdata_to_plat_	16	static
-drivers/clk/clk_fixed_rate.c:59:12:clk_fixed_rate_of_to_plat	8	static

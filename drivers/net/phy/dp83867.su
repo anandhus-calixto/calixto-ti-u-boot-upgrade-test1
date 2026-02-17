@@ -1,2 +1,0 @@
-drivers/net/phy/dp83867.c:400:12:dp83867_probe	8	static
-drivers/net/phy/dp83867.c:252:12:dp83867_config	16	static

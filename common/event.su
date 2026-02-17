@@ -1,7 +1,0 @@
-common/event.c:56:13:event_type_name	0	static
-common/event.c:131:5:event_notify	32	static
-common/event.c:154:5:event_notify_null	0	static
-common/event.c:159:6:event_show_spy_list	40	static
-common/event.c:181:5:event_register	24	static
-common/event.c:199:5:event_uninit	12	static
-common/event.c:210:5:event_init	0	static

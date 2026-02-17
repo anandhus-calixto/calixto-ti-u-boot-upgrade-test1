@@ -1,3 +1,0 @@
-drivers/net/phy/atheros.c:72:12:ar803x_debug_reg_mask	16	static
-drivers/net/phy/atheros.c:113:12:ar8021_config	8	static
-drivers/net/phy/atheros.c:311:12:ar803x_config	32	static

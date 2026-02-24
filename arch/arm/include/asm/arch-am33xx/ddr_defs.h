@@ -214,6 +214,23 @@
 #define CALIXTO256_DDR3_EMIF_SDREF              0x0000093B
 #define CALIXTO256_DDR3_ZQ_CFG                  0x50074BE4
 
+/* IEC61850_MODULE Configuration */
+#define IEC61850_MODULE_DDR3_RATIO                      0x100
+#define IEC61850_MODULE_DDR3_INVERT_CLKOUT              0x1
+#define IEC61850_MODULE_DDR3_RD_DQS                     0x3A
+#define IEC61850_MODULE_DDR3_WR_DQS                     0x90
+#define IEC61850_MODULE_DDR3_PHY_FIFO_WE                0x107
+#define IEC61850_MODULE_DDR3_PHY_WR_DATA                0xD0
+#define IEC61850_MODULE_DDR3_IOCTRL_VALUE               0x18B
+
+#define IEC61850_MODULE_DDR3_EMIF_READ_LATENCY       0x08
+#define IEC61850_MODULE_DDR3_EMIF_TIM1               0x0AAAD4DB
+#define IEC61850_MODULE_DDR3_EMIF_TIM2               0x248F7FDA
+#define IEC61850_MODULE_DDR3_EMIF_TIM3               0x50FFE8BF
+#define IEC61850_MODULE_DDR3_EMIF_SDCFG              0x61A052B2
+#define IEC61850_MODULE_DDR3_EMIF_SDREF              0x00000C30
+#define IEC61850_MODULE_DDR3_ZQ_CFG                  0x50074BE4
+
 
 
 /**

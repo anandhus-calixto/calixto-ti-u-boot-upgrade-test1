@@ -46,12 +46,16 @@
 #include <watchdog.h>
 #include "board.h"
 
-DECLARE_GLOBAL_DATA_PTR;
-static struct ctrl_dev *cdev = (struct ctrl_dev *)CTRL_DEVICE_BASE;
+/* GPIO that controls LEDs */
+#define GPIO_TO_PIN(bank, gpio)		(32 * (bank) + (gpio))
+#define LED1_GPIO       GPIO_TO_PIN(1, 0)
+#define LED2_GPIO	GPIO_TO_PIN(1, 31)
+#define LED3_GPIO	GPIO_TO_PIN(1, 29)
+#define LED4_GPIO	GPIO_TO_PIN(1, 5)
 
-/*
- * Read header information from EEPROM into global structure.
- */
+DECLARE_GLOBAL_DATA_PTR;
+
+static struct ctrl_dev *cdev = (struct ctrl_dev *)CTRL_DEVICE_BASE;
 
 #ifndef CONFIG_DM_SERIAL
 struct serial_device *default_serial_console(void)
@@ -63,44 +67,39 @@ struct serial_device *default_serial_console(void)
 
 #if !CONFIG_IS_ENABLED(SKIP_LOWLEVEL_INIT)
 
-
-/********************** calixto *************************/
-static const struct ddr_data ddr3_calixto_nxt_data = {
-        .datardsratio0 = CALIXTO_DDR3_RD_DQS,
-        .datawdsratio0 = CALIXTO_DDR3_WR_DQS,
-        .datafwsratio0 = CALIXTO_DDR3_PHY_FIFO_WE,
-        .datawrsratio0 = CALIXTO_DDR3_PHY_WR_DATA,
+static const struct ddr_data ddr3_iec61850_module_data = {
+	.datardsratio0 = IEC61850_MODULE_DDR3_RD_DQS,
+	.datawdsratio0 = IEC61850_MODULE_DDR3_WR_DQS,
+	.datafwsratio0 = IEC61850_MODULE_DDR3_PHY_FIFO_WE,
+	.datawrsratio0 = IEC61850_MODULE_DDR3_PHY_WR_DATA,
 };
 
-static const struct cmd_control ddr3_calixto_nxt_cmd_ctrl_data = {
-        .cmd0csratio = CALIXTO_DDR3_RATIO,
-        .cmd0iclkout = CALIXTO_DDR3_INVERT_CLKOUT,
+static const struct cmd_control ddr3_iec61850_module_cmd_ctrl_data = {
+	.cmd0csratio = IEC61850_MODULE_DDR3_RATIO,
+	.cmd0iclkout = IEC61850_MODULE_DDR3_INVERT_CLKOUT,
 
-        .cmd1csratio = CALIXTO_DDR3_RATIO,
-        .cmd1iclkout = CALIXTO_DDR3_INVERT_CLKOUT,
+	.cmd1csratio = IEC61850_MODULE_DDR3_RATIO,
+	.cmd1iclkout = IEC61850_MODULE_DDR3_INVERT_CLKOUT,
 
-        .cmd2csratio = CALIXTO_DDR3_RATIO,
-        .cmd2iclkout = CALIXTO_DDR3_INVERT_CLKOUT,
+	.cmd2csratio = IEC61850_MODULE_DDR3_RATIO,
+	.cmd2iclkout = IEC61850_MODULE_DDR3_INVERT_CLKOUT,
 };
 
-
-
-static struct emif_regs ddr3_calixto512_emif_reg_data = {
-        .sdram_config = CALIXTO512_DDR3_EMIF_SDCFG,
-        .ref_ctrl = CALIXTO512_DDR3_EMIF_SDREF,
-        .sdram_tim1 = CALIXTO512_DDR3_EMIF_TIM1,
-        .sdram_tim2 = CALIXTO512_DDR3_EMIF_TIM2,
-        .sdram_tim3 = CALIXTO512_DDR3_EMIF_TIM3,
-        .zq_config = CALIXTO512_DDR3_ZQ_CFG,
-        .emif_ddr_phy_ctlr_1 = CALIXTO512_DDR3_EMIF_READ_LATENCY,
+static struct emif_regs ddr3_iec61850_module_emif_reg_data = {
+	.sdram_config = IEC61850_MODULE_DDR3_EMIF_SDCFG,
+	.ref_ctrl     = IEC61850_MODULE_DDR3_EMIF_SDREF,
+	.sdram_tim1   = IEC61850_MODULE_DDR3_EMIF_TIM1,
+	.sdram_tim2   = IEC61850_MODULE_DDR3_EMIF_TIM2,
+	.sdram_tim3   = IEC61850_MODULE_DDR3_EMIF_TIM3,
+	.ocp_config   = EMIF_OCP_CONFIG_IEC61850_MODULE,
+	.zq_config    = IEC61850_MODULE_DDR3_ZQ_CFG,
+	.emif_ddr_phy_ctlr_1 = IEC61850_MODULE_DDR3_EMIF_READ_LATENCY,
 };
-
-/************************************************************************/
 
 #ifdef CONFIG_SPL_OS_BOOT
 int spl_start_uboot(void)
 {
-#ifdef CONFIG_SPL_SERIAL
+#ifdef CONFIG_SPL_SERIAL_SUPPORT
 	/* break into full u-boot on 'c' */
 	if (serial_tstc() && serial_getc() == 'c')
 		return 1;
@@ -116,25 +115,22 @@ int spl_start_uboot(void)
 	return 0;
 }
 #endif
-		
+
 const struct dpll_params *get_dpll_ddr_params(void)
 {
+	int ind = get_sys_clk_index();
 
-		int ind = get_sys_clk_index();
-		return &dpll_ddr3_400MHz[ind];
+	return &dpll_ddr3_400MHz[ind];
+
 }
-
 
 const struct dpll_params *get_dpll_mpu_params(void)
 {
 	int ind = get_sys_clk_index();
-	//int freq = am335x_get_efuse_mpu_max_freq(cdev);
-	am335x_get_efuse_mpu_max_freq(cdev);
-	
+	int freq = am335x_get_efuse_mpu_max_freq(cdev);
+
 	return &dpll_mpu_opp[ind][3];
 }
-
-
 
 void set_uart_mux_conf(void)
 {
@@ -146,36 +142,43 @@ void set_uart_mux_conf(void)
 void set_mux_conf_regs(void)
 {
 	enable_board_pin_mux();
+
 }
 
 
-const struct ctrl_ioregs ioregs_calixto_nxt = {
-	.cm0ioctl		= CALIXTO_DDR3_IOCTRL_VALUE,
-	.cm1ioctl		= CALIXTO_DDR3_IOCTRL_VALUE,
-	.cm2ioctl		= CALIXTO_DDR3_IOCTRL_VALUE,
-	.dt0ioctl		= CALIXTO_DDR3_IOCTRL_VALUE,
-	.dt1ioctl		= CALIXTO_DDR3_IOCTRL_VALUE,
+
+const struct ctrl_ioregs ioregs_iec61850_module = {
+	.cm0ioctl		= IEC61850_MODULE_DDR3_IOCTRL_VALUE,
+	.cm1ioctl		= IEC61850_MODULE_DDR3_IOCTRL_VALUE,
+	.cm2ioctl		= IEC61850_MODULE_DDR3_IOCTRL_VALUE,
+	.dt0ioctl		= IEC61850_MODULE_DDR3_IOCTRL_VALUE,
+	.dt1ioctl		= IEC61850_MODULE_DDR3_IOCTRL_VALUE,
 };
 
 void sdram_init(void)
 {
-       config_ddr(303, &ioregs_calixto_nxt, &ddr3_calixto_nxt_data,&ddr3_calixto_nxt_cmd_ctrl_data, &ddr3_calixto512_emif_reg_data, 0);
+	
+		config_ddr(400, &ioregs_iec61850_module,
+			   &ddr3_iec61850_module_data,
+		           &ddr3_iec61850_module_cmd_ctrl_data,
+                           &ddr3_iec61850_module_emif_reg_data, 0);
+	
 }
 #endif
 
 #if defined(CONFIG_OF_BOARD_SETUP) && defined(CONFIG_OF_CONTROL) && \
 	defined(CONFIG_DM_ETH) && defined(CONFIG_DRIVER_TI_CPSW)
 
-#define MAX_CPSW_SLAVES	2
 
 /* At the moment, we do not want to stop booting for any failures here */
 int ft_board_setup(void *fdt, struct bd_info *bd)
 {
-
+	
 	return 0;
 }
 
 #endif
+
 
 /*
  * Basic board specific setup.  Pinmux has been handled already.
@@ -191,13 +194,12 @@ int board_init(void)
 	gpmc_init();
 #endif
 
-
 #if defined(CONFIG_CLOCK_SYNTHESIZER) && (!defined(CONFIG_XPL_BUILD) || \
 	(defined(CONFIG_SPL_ETH_SUPPORT) && defined(CONFIG_XPL_BUILD)))
 	
 #endif
 
-return 0;
+	return 0;
 }
 
 #ifdef CONFIG_BOARD_LATE_INIT
@@ -209,10 +211,9 @@ int board_late_init(void)
 	uint32_t mac_hi, mac_lo;
 #endif
 
+
 #ifdef CONFIG_ENV_VARS_UBOOT_RUNTIME_CONFIG
-//	char *name = NULL;
-
-
+	char *name = NULL;
 
 	/*
 	 * Default FIT boot on HS devices. Non FIT images are not allowed
@@ -254,6 +255,7 @@ int board_late_init(void)
 			eth_env_set_enetaddr("eth1addr", mac_addr);
 	}
 
+	
 #endif
 
 	if (!env_get("serial#")) {
@@ -277,10 +279,16 @@ int board_late_init(void)
 #ifdef CONFIG_SPL_LOAD_FIT
 int board_fit_config_name_match(const char *name)
 {
-	return 0;
+		return 0;
 }
 #endif
 
+#ifdef CONFIG_TI_SECURE_DEVICE
+void board_fit_image_post_process(void **p_image, size_t *p_size)
+{
+	secure_boot_verify_image(p_image, p_size);
+}
+#endif
 
 #if !CONFIG_IS_ENABLED(OF_CONTROL)
 static const struct omap_hsmmc_plat am335x_mmc0_plat = {
@@ -295,20 +303,6 @@ static const struct omap_hsmmc_plat am335x_mmc0_plat = {
 U_BOOT_DRVINFO(am335x_mmc0) = {
 	.name = "omap_hsmmc",
 	.plat = &am335x_mmc0_plat,
-};
-
-static const struct omap_hsmmc_plat am335x_mmc1_plat = {
-	.base_addr = (struct hsmmc *)OMAP_HSMMC2_BASE,
-	.cfg.host_caps = MMC_MODE_HS_52MHz | MMC_MODE_HS | MMC_MODE_8BIT,
-	.cfg.f_min = 400000,
-	.cfg.f_max = 52000000,
-	.cfg.voltages = MMC_VDD_32_33 | MMC_VDD_33_34 | MMC_VDD_165_195,
-	.cfg.b_max = CONFIG_SYS_MMC_MAX_BLK_COUNT,
-};
-
-U_BOOT_DRVINFO(am335x_mmc1) = {
-	.name = "omap_hsmmc",
-	.plat = &am335x_mmc1_plat,
 };
 
 #endif

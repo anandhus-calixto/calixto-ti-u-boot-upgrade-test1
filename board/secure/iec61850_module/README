@@ -1,0 +1,13 @@
+Summary
+=======
+
+This document covers various features of the 'iec61850_module' build.
+s
+
+Hardware
+========
+
+The binary produced by this board supports
+- iec61850 module
+
+

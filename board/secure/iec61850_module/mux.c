@@ -33,7 +33,6 @@ static struct module_pin_mux mmc0_pin_mux[] = {
 	{OFFSET(mmc0_dat0), (MODE(0) | RXACTIVE | PULLUP_EN)},	/* MMC0_DAT0 */
 	{OFFSET(mmc0_clk), (MODE(0) | RXACTIVE | PULLUP_EN)},	/* MMC0_CLK */
 	{OFFSET(mmc0_cmd), (MODE(0) | RXACTIVE | PULLUP_EN)},	/* MMC0_CMD */
-	{OFFSET(mcasp0_aclkx), (MODE(7) | RXACTIVE | PULLUP_EN)},	/* mcasp0_aclkx */
 	{-1},
 };
 
@@ -47,37 +46,12 @@ static struct module_pin_mux spi0_pin_mux[] = {
 	{-1},
 };
 
-static struct module_pin_mux rmii1_pin_mux[] = {
-	{OFFSET(mii1_crs), MODE(1) | RXACTIVE},	        /* RMII1_CRS */
-	{OFFSET(mii1_rxerr), MODE(1) | RXACTIVE},		/* RMII1_RXERR */
-	{OFFSET(mii1_txen), MODE(1)},				/* RMII1_TXEN */
-	{OFFSET(mii1_txd1), MODE(1)},				/* RMII1_TXD1 */
-	{OFFSET(mii1_txd0), MODE(1)},				/* RMII1_TXD0 */
-	{OFFSET(mii1_rxd1), MODE(1) | RXACTIVE},		/* RMII1_RXD1 */
-	{OFFSET(mii1_rxd0), MODE(1) | RXACTIVE},		/* RMII1_RXD0 */
-	{OFFSET(mdio_data), MODE(0) | RXACTIVE | PULLUP_EN},  /* MDIO_DATA */
-	{OFFSET(mdio_clk), MODE(0) | PULLUP_EN},	        /* MDIO_CLK */
-	{OFFSET(rmii1_refclk), MODE(0) | RXACTIVE},		/* RMII1_REFCLK */
+static struct module_pin_mux led_pin_mux[] = {
+	{OFFSET(gpmc_ad0), (MODE(7) | PULLDOWN_EN)},	/* GPIO1_0 */
+	{OFFSET(gpmc_ad5), (MODE(7) | PULLDOWN_EN)},	/* GPIO1_5 */
+	{OFFSET(gpmc_csn0), (MODE(7) | PULLDOWN_EN)},	/* GPIO1_29 */
+	{OFFSET(gpmc_csn2), (MODE(7) | PULLDOWN_EN)},	/* GPIO1_31 */
 	{-1},
-};
-
-static struct module_pin_mux nand_pin_mux[] = {
-        {OFFSET(gpmc_ad0),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD0  */
-        {OFFSET(gpmc_ad1),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD1  */
-        {OFFSET(gpmc_ad2),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD2  */
-        {OFFSET(gpmc_ad3),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD3  */
-        {OFFSET(gpmc_ad4),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD4  */
-        {OFFSET(gpmc_ad5),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD5  */
-        {OFFSET(gpmc_ad6),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD6  */
-        {OFFSET(gpmc_ad7),      (MODE(0) | PULLUDDIS | RXACTIVE)}, /* AD7  */
-        {OFFSET(gpmc_wait0),    (MODE(0) | PULLUP_EN | RXACTIVE)}, /* nWAIT */
-        {OFFSET(gpmc_wpn),      (MODE(7) | PULLUP_EN)},            /* nWP */
-        {OFFSET(gpmc_csn0),     (MODE(0) | PULLUP_EN)},            /* nCS */
-        {OFFSET(gpmc_wen),      (MODE(0) | PULLDOWN_EN)},          /* WEN */
-        {OFFSET(gpmc_oen_ren),  (MODE(0) | PULLDOWN_EN)},          /* OE */
-        {OFFSET(gpmc_advn_ale), (MODE(0) | PULLDOWN_EN)},          /* ADV_ALE */
-        {OFFSET(gpmc_be0n_cle), (MODE(0) | PULLDOWN_EN)},          /* BE_CLE */
-        {-1},
 };
 
 void enable_uart0_pin_mux(void)
@@ -89,10 +63,10 @@ void enable_board_pin_mux(void)
 {
         /* Calixto Module Pinmux */
         configure_module_pin_mux(mmc0_pin_mux);
-        configure_module_pin_mux(rmii1_pin_mux);
         configure_module_pin_mux(spi0_pin_mux);
-        configure_module_pin_mux(nand_pin_mux);
+	configure_module_pin_mux(led_pin_mux);
 }
 /* CPLD registers */
 #define I2C_CPLD_ADDR	0x35
 #define CFG_REG		0x10
+

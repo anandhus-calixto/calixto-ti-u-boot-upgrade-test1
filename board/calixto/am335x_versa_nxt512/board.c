@@ -47,6 +47,7 @@
 #include "board.h"
 
 DECLARE_GLOBAL_DATA_PTR;
+
 static struct ctrl_dev *cdev = (struct ctrl_dev *)CTRL_DEVICE_BASE;
 
 /*
@@ -121,7 +122,7 @@ const struct dpll_params *get_dpll_ddr_params(void)
 {
 
 		int ind = get_sys_clk_index();
-		return &dpll_ddr3_400MHz[ind];
+		return &dpll_ddr3_303MHz[ind];
 }
 
 

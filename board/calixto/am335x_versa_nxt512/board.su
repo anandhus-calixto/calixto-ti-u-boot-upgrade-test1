@@ -1,0 +1,4 @@
+board/calixto/am335x_versa_nxt512/board.c:173:5:ft_board_setup	0	static
+board/calixto/am335x_versa_nxt512/board.c:184:5:board_init	0	static
+board/calixto/am335x_versa_nxt512/board.c:205:5:board_late_init	32	static
+board/calixto/am335x_versa_nxt512/board.c:323:5:board_fit_config_name_match	0	static

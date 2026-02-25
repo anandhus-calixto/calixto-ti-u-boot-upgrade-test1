@@ -1,0 +1,1 @@
+cmd_drivers/power/built-in.o :=  rm -f drivers/power/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/power/built-in.o drivers/power/pmic/built-in.o drivers/power/regulator/built-in.o

@@ -1,0 +1,1 @@
+cmd_u-boot.img := ./tools/mkimage -f auto -A arm -T firmware -C none -O u-boot -a 0x80800000 -e 0x80800000 -p 0x0 -n "U-Boot 2025.01-g4878f62a7466-dirty for am335x_versa_nxt512 board" -E  -b arch/arm/dts/am335x-versa-nxt512.dtb  -d u-boot-nodtb.bin u-boot.img >/dev/null 

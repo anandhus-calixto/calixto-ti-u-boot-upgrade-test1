@@ -1,0 +1,1 @@
+cmd_env/built-in.o :=  rm -f env/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT env/built-in.o env/common.o env/env.o env/attr.o env/flags.o env/callback.o env/nowhere.o

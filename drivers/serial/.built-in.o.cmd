@@ -1,0 +1,1 @@
+cmd_drivers/serial/built-in.o :=  rm -f drivers/serial/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/serial/built-in.o drivers/serial/serial-uclass.o drivers/serial/ns16550.o drivers/serial/serial_omap.o

@@ -1,0 +1,1 @@
+cmd_drivers/net/phy/built-in.o :=  rm -f drivers/net/phy/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/net/phy/built-in.o drivers/net/phy/phy.o drivers/net/phy/atheros.o drivers/net/phy/smsc.o drivers/net/phy/dp83867.o

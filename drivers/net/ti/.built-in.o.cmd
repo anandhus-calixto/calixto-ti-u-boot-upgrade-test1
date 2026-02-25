@@ -1,0 +1,1 @@
+cmd_drivers/net/ti/built-in.o :=  rm -f drivers/net/ti/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/net/ti/built-in.o drivers/net/ti/cpsw.o drivers/net/ti/cpsw-common.o drivers/net/ti/cpsw_mdio.o

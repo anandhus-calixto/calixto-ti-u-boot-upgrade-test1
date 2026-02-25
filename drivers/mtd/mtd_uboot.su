@@ -1,0 +1,3 @@
+drivers/mtd/mtd_uboot.c:22:20:get_mtdids	8	static
+drivers/mtd/mtd_uboot.c:56:5:mtd_search_alternate_name	32	static
+drivers/mtd/mtd_uboot.c:311:5:mtd_probe_devices	80	static

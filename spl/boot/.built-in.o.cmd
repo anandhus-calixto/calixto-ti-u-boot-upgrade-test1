@@ -1,0 +1,1 @@
+cmd_spl/boot/built-in.o :=  rm -f spl/boot/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/boot/built-in.o spl/boot/image.o spl/boot/image-board.o spl/boot/image-android.o spl/boot/image-android-dt.o spl/boot/fdt_support.o spl/boot/image-fdt.o spl/boot/image-fit.o spl/boot/common_fit.o

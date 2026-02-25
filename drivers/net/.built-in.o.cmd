@@ -1,0 +1,1 @@
+cmd_drivers/net/built-in.o :=  rm -f drivers/net/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/net/built-in.o drivers/net/mscc_eswitch/built-in.o drivers/net/phy/built-in.o drivers/net/qe/built-in.o drivers/net/ti/built-in.o

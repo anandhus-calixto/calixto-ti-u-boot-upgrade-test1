@@ -1,0 +1,1 @@
+cmd_spl/drivers/usb/common/built-in.o :=  rm -f spl/drivers/usb/common/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/drivers/usb/common/built-in.o spl/drivers/usb/common/common.o spl/drivers/usb/common/usb_urb.o

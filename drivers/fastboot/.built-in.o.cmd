@@ -1,0 +1,1 @@
+cmd_drivers/fastboot/built-in.o :=  rm -f drivers/fastboot/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/fastboot/built-in.o drivers/fastboot/fb_common.o drivers/fastboot/fb_getvar.o drivers/fastboot/fb_command.o

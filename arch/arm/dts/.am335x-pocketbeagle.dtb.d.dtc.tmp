@@ -1,0 +1,1 @@
+arch/arm/dts/am335x-pocketbeagle.dtb: arch/arm/dts/.am335x-pocketbeagle.dtb.dts.tmp arch/arm/dts/tps65217.dtsi

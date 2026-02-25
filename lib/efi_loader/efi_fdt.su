@@ -1,0 +1,2 @@
+lib/efi_loader/efi_fdt.c:29:5:efi_get_distro_fdt_name	40	static
+lib/efi_loader/efi_fdt.c:85:6:efi_load_distro_fdt	296	static

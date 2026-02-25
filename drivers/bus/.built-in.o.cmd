@@ -1,0 +1,1 @@
+cmd_drivers/bus/built-in.o :=  rm -f drivers/bus/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/bus/built-in.o drivers/bus/ti-sysc.o

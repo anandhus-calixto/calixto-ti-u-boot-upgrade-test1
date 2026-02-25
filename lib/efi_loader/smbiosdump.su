@@ -1,0 +1,9 @@
+lib/efi_loader/smbiosdump.c:48:13:print	0	static
+lib/efi_loader/smbiosdump.c:292:11:checksum	0	static
+lib/efi_loader/smbiosdump.c:273:14:get_config_table	24	static
+lib/efi_loader/smbiosdump.c:37:13:color	0	static
+lib/efi_loader/smbiosdump.c:69:13:error	8	static
+lib/efi_loader/smbiosdump.c:307:21:do_check	16	static
+lib/efi_loader/smbiosdump.c:56:13:cls	0	static
+lib/efi_loader/smbiosdump.c:199:13:starts_with	0	static
+lib/efi_loader/smbiosdump.c:595:21:efi_main	240	static

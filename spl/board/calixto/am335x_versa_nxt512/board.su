@@ -1,0 +1,9 @@
+board/calixto/am335x_versa_nxt512/board.c:121:27:get_dpll_ddr_params	8	static
+board/calixto/am335x_versa_nxt512/board.c:129:27:get_dpll_mpu_params	8	static
+board/calixto/am335x_versa_nxt512/board.c:140:6:set_uart_mux_conf	0	static
+board/calixto/am335x_versa_nxt512/board.c:147:6:set_mux_conf_regs	0	static
+board/calixto/am335x_versa_nxt512/board.c:161:6:sdram_init	16	static
+board/calixto/am335x_versa_nxt512/board.c:173:5:ft_board_setup	0	static
+board/calixto/am335x_versa_nxt512/board.c:184:5:board_init	0	static
+board/calixto/am335x_versa_nxt512/board.c:205:5:board_late_init	24	static
+board/calixto/am335x_versa_nxt512/board.c:323:5:board_fit_config_name_match	0	static

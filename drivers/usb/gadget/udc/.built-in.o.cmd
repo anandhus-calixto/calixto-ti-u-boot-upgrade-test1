@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/udc/built-in.o :=  rm -f drivers/usb/gadget/udc/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/usb/gadget/udc/built-in.o drivers/usb/gadget/udc/udc-core.o drivers/usb/gadget/udc/udc-uclass.o

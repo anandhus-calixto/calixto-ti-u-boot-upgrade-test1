@@ -1,0 +1,1 @@
+cmd_tools/mkeficapsule := cc   -o tools/mkeficapsule tools/generated/lib/uuid.o tools/generated/lib/sha1.o tools/libfdt/fdt.o tools/libfdt/fdt_ro.o tools/libfdt/fdt_wip.o tools/libfdt/fdt_sw.o tools/libfdt/fdt_rw.o tools/libfdt/fdt_strerror.o tools/libfdt/fdt_empty_tree.o tools/libfdt/fdt_addresses.o tools/libfdt/fdt_overlay.o tools/mkeficapsule.o   -lgnutls

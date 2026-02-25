@@ -1,0 +1,4 @@
+drivers/clk/ti/clk.c:49:6:clk_ti_writel	4	static
+drivers/clk/ti/clk.c:56:5:clk_ti_readl	16	static
+drivers/clk/ti/clk.c:35:6:clk_ti_latch	16	static
+drivers/clk/ti/clk.c:79:5:clk_ti_get_reg_addr	32	static

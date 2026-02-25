@@ -1,0 +1,1 @@
+cmd_drivers/mtd/nand/built-in.o :=  rm -f drivers/mtd/nand/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/mtd/nand/built-in.o drivers/mtd/nand/raw/built-in.o

@@ -274,6 +274,50 @@ int board_late_init(void)
 }
 #endif
 
+/* CPSW plat */
+#if (CONFIG_IS_ENABLED(NET) || CONFIG_IS_ENABLED(NET_LWIP)) && \
+    !CONFIG_IS_ENABLED(OF_CONTROL)
+struct cpsw_slave_data slave_data[] = {
+	{
+		.slave_reg_ofs  = CPSW_SLAVE0_OFFSET,
+		.sliver_reg_ofs = CPSW_SLIVER0_OFFSET,
+		.phy_addr       = 0,
+	},
+
+};
+
+struct cpsw_platform_data am335_eth_data = {
+	.cpsw_base		= CPSW_BASE,
+	.version		= CPSW_CTRL_VERSION_2,
+	.bd_ram_ofs		= CPSW_BD_OFFSET,
+	.ale_reg_ofs		= CPSW_ALE_OFFSET,
+	.cpdma_reg_ofs		= CPSW_CPDMA_OFFSET,
+	.mdio_div		= CPSW_MDIO_DIV,
+	.host_port_reg_ofs	= CPSW_HOST_PORT_OFFSET,
+	.channels		= 8,
+	.slaves			= 1,
+	.slave_data		= slave_data,
+	.ale_entries		= 1024,
+	.mac_control		= 0x20,
+	.active_slave		= 0,
+	.mdio_base		= 0x4a101000,
+	.gmii_sel		= 0x44e10650,
+	.phy_sel_compat		= "ti,am3352-cpsw-phy-sel",
+	.syscon_addr		= 0x44e10630,
+	.macid_sel_compat	= "cpsw,am33xx",
+};
+
+struct eth_pdata cpsw_pdata = {
+	.iobase = 0x4a100000,
+	.phy_interface = 0,
+	.priv_pdata = &am335_eth_data,
+};
+
+U_BOOT_DRVINFO(am335x_eth) = {
+	.name = "eth_cpsw",
+	.plat = &cpsw_pdata,
+};
+#endif
 
 #ifdef CONFIG_SPL_LOAD_FIT
 int board_fit_config_name_match(const char *name)

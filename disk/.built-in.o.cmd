@@ -1,0 +1,1 @@
+cmd_disk/built-in.o :=  rm -f disk/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT disk/built-in.o disk/part.o disk/disk-uclass.o disk/part_dos.o disk/part_iso.o disk/part_efi.o

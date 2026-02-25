@@ -1,0 +1,3 @@
+common/spl/spl_ext.c:11:14:spl_fit_read	32	static
+common/spl/spl_ext.c:23:5:spl_load_image_ext	136	static
+common/spl/spl_ext.c:147:5:spl_load_image_ext_os	0	static

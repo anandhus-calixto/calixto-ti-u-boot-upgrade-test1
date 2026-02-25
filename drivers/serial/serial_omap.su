@@ -1,0 +1,2 @@
+drivers/serial/serial_omap.c:186:12:omap_serial_setbrg	32	static
+drivers/serial/serial_omap.c:108:12:omap_serial_of_to_plat	48	static

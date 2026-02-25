@@ -1,0 +1,7 @@
+#define PLAIN_VERSION "2025.01-g4878f62a7466-dirty"
+#define U_BOOT_VERSION "U-Boot " PLAIN_VERSION
+#define U_BOOT_VERSION_NUM 2025
+#define U_BOOT_VERSION_NUM_PATCH 1
+#define HOST_ARCH 0x00a7
+#define CC_VERSION_STRING "arm-oe-linux-gnueabi-gcc (GCC) 13.4.0"
+#define LD_VERSION_STRING "GNU ld (GNU Binutils) 2.42.0.20240723"

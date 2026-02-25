@@ -1,0 +1,1 @@
+cmd_spl/drivers/usb/gadget/built-in.o :=  rm -f spl/drivers/usb/gadget/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/drivers/usb/gadget/built-in.o spl/drivers/usb/gadget/epautoconf.o spl/drivers/usb/gadget/config.o spl/drivers/usb/gadget/usbstring.o spl/drivers/usb/gadget/g_dnl.o

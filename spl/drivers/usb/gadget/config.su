@@ -1,0 +1,2 @@
+drivers/usb/gadget/config.c:32:1:usb_descriptor_fillbuf	24	static
+drivers/usb/gadget/config.c:73:5:usb_gadget_config_buf	16	static

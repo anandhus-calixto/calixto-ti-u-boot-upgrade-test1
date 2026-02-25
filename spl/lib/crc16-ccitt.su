@@ -1,0 +1,2 @@
+lib/crc16-ccitt.c:66:10:crc16_ccitt	12	static
+lib/crc16-ccitt.c:74:6:crc16_ccitt_wd_buf	16	static

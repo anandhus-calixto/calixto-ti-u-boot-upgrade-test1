@@ -1,0 +1,1 @@
+cmd_drivers/mtd/spi/spi-nor.o := rm -f drivers/mtd/spi/spi-nor.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/mtd/spi/spi-nor.o drivers/mtd/spi/sf_probe.o drivers/mtd/spi/spi-nor-ids.o drivers/mtd/spi/spi-nor-core.o

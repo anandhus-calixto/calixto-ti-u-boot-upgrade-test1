@@ -1,0 +1,5 @@
+env/callback.c:77:12:clear_callback	0	static
+env/callback.c:14:29:find_env_callback	24	static
+env/callback.c:113:12:on_callbacks	16	static
+env/callback.c:87:12:set_callback	48	static
+env/callback.c:42:6:env_callback_init	280	static

@@ -1,0 +1,13 @@
+drivers/spi/spi-mem.c:114:12:spi_check_buswidth_req.isra	0	static
+drivers/spi/spi-mem.c:149:13:spi_mem_check_buswidth	16	static
+drivers/spi/spi-mem.c:171:6:spi_mem_dtr_supports_op	0	static
+drivers/spi/spi-mem.c:195:6:spi_mem_default_supports_op	0	static
+drivers/spi/spi-mem.c:223:6:spi_mem_supports_op	4	static
+drivers/spi/spi-mem.c:248:5:spi_mem_exec_op	56	dynamic
+drivers/spi/spi-mem.c:467:5:spi_mem_adjust_op_size	8	static
+drivers/spi/spi-mem.c:499:16:spi_mem_no_dirmap_read	72	static
+drivers/spi/spi-mem.c:553:1:spi_mem_dirmap_create	24	static
+drivers/spi/spi-mem.c:602:6:spi_mem_dirmap_destroy	8	static
+drivers/spi/spi-mem.c:701:9:spi_mem_dirmap_read	8	static
+drivers/spi/spi-mem.c:741:9:spi_mem_dirmap_write	8	static
+drivers/spi/spi-mem.c:764:5:spi_mem_do_calibration	8	static

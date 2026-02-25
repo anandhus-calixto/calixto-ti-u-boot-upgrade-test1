@@ -1,0 +1,1 @@
+cmd_drivers/thermal/built-in.o :=  rm -f drivers/thermal/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/thermal/built-in.o

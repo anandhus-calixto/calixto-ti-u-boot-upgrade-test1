@@ -1,4 +1,0 @@
-common/spl/spl_fat.c:47:14:spl_fit_read	40	static
-common/spl/spl_fat.c:22:6:spl_fat_force_reregister	0	static
-common/spl/spl_fat.c:61:5:spl_load_image_fat	48	static
-common/spl/spl_fat.c:160:5:spl_load_image_fat_os	0	static

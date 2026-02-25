@@ -1,1 +1,0 @@
-cmd_spl/env/built-in.o :=  rm -f spl/env/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/env/built-in.o spl/env/common.o spl/env/env.o spl/env/attr.o spl/env/flags.o spl/env/nowhere.o

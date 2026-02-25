@@ -1,6 +1,0 @@
-lib/md5.c:42:1:byteReverse	0	static
-lib/md5.c:182:1:MD5Transform	80	static
-lib/md5.c:58:1:MD5Init	0	static
-lib/md5.c:74:1:MD5Update	32	static
-lib/md5.c:123:1:MD5Final	16	static
-lib/md5.c:271:1:md5_wd	104	static

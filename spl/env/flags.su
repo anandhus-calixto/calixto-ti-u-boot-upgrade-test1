@@ -1,7 +1,0 @@
-env/flags.c:195:13:skip_num	12	static
-env/flags.c:123:24:env_flags_parse_vartype	16	static
-env/flags.c:145:26:env_flags_parse_varaccess	16	static
-env/flags.c:171:26:env_flags_parse_varaccess_from_binflags	8	static
-env/flags.c:215:5:eth_validate_ethaddr_str	24	static
-env/flags.c:445:6:env_flags_init	32	static
-env/flags.c:525:5:env_flags_validate	48	static

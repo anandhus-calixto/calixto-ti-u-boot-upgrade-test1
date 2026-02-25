@@ -1,1 +1,0 @@
-cmd_spl/arch/arm/cpu/built-in.o :=  rm -f spl/arch/arm/cpu/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/arch/arm/cpu/built-in.o

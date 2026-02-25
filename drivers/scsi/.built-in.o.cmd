@@ -1,1 +1,0 @@
-cmd_drivers/scsi/built-in.o :=  rm -f drivers/scsi/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/scsi/built-in.o

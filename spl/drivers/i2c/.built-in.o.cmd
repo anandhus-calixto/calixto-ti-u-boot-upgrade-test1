@@ -1,1 +1,0 @@
-cmd_spl/drivers/i2c/built-in.o :=  rm -f spl/drivers/i2c/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/drivers/i2c/built-in.o spl/drivers/i2c/i2c-uclass.o spl/drivers/i2c/omap24xx_i2c.o

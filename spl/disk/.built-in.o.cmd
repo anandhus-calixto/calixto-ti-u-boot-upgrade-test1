@@ -1,1 +1,0 @@
-cmd_spl/disk/built-in.o :=  rm -f spl/disk/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/disk/built-in.o spl/disk/part.o spl/disk/disk-uclass.o spl/disk/part_dos.o

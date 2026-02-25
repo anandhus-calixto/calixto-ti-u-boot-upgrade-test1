@@ -1,2 +1,0 @@
-boot/vbe_simple_os.c:18:5:vbe_simple_fixup_node	16	static
-boot/vbe_simple_os.c:52:12:bootmeth_vbe_simple_ft_fixup	296	static

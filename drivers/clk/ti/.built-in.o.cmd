@@ -1,1 +1,0 @@
-cmd_drivers/clk/ti/built-in.o :=  rm -f drivers/clk/ti/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/clk/ti/built-in.o drivers/clk/ti/clk.o drivers/clk/ti/omap4-cm.o

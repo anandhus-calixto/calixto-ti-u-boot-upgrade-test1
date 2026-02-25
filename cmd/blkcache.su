@@ -1,3 +1,0 @@
-cmd/blkcache.c:49:12:do_blkcache	24	static
-cmd/blkcache.c:29:12:blkc_configure	16	static
-cmd/blkcache.c:13:12:blkc_show	40	static

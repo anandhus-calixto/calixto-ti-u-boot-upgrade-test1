@@ -1,7 +1,0 @@
-drivers/usb/musb-new/musb_gadget_ep0.c:898:1:musb_g_ep0_enable	0	static
-drivers/usb/musb-new/musb_gadget_ep0.c:904:12:musb_g_ep0_disable	0	static
-drivers/usb/musb-new/musb_gadget_ep0.c:998:12:musb_g_ep0_halt	8	static
-drivers/usb/musb-new/musb_gadget_ep0.c:524:13:ep0_txstate	32	static
-drivers/usb/musb-new/musb_gadget_ep0.c:992:12:musb_g_ep0_dequeue	0	static
-drivers/usb/musb-new/musb_gadget_ep0.c:911:1:musb_g_ep0_queue	16	static
-drivers/usb/musb-new/musb_gadget_ep0.c:648:13:musb_g_ep0_irq	48	static

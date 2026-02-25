@@ -1,1 +1,0 @@
-cmd_spl/fs/built-in.o :=  rm -f spl/fs/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/fs/built-in.o spl/fs/fat/built-in.o spl/fs/ext4/built-in.o spl/fs/fs_internal.o

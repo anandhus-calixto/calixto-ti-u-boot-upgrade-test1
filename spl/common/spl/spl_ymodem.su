@@ -1,3 +1,0 @@
-common/spl/spl_ymodem.c:37:14:ymodem_read_fit	40	static
-common/spl/spl_ymodem.c:31:12:getcymodem	8	static
-common/spl/spl_ymodem.c:88:5:spl_ymodem_load_image	1088	static

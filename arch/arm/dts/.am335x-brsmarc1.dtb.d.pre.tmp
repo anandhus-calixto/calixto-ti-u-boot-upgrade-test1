@@ -1,9 +1,0 @@
-.am335x-brsmarc1.dtb.pre.o: arch/arm/dts/.am335x-brsmarc1.dtb.pre.tmp \
- include/linux/kconfig.h include/generated/autoconf.h \
- arch/arm/dts/am33xx.dtsi include/dt-bindings/bus/ti-sysc.h \
- dts/upstream/include/dt-bindings/gpio/gpio.h \
- include/dt-bindings/pinctrl/am33xx.h include/dt-bindings/pinctrl/omap.h \
- include/dt-bindings/clock/am3.h arch/arm/dts/am33xx-l4.dtsi \
- arch/arm/dts/am33xx-clocks.dtsi \
- dts/upstream/include/dt-bindings/thermal/thermal.h \
- arch/arm/dts/am33xx-u-boot.dtsi

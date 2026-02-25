@@ -1,1 +1,0 @@
-cmd_drivers/block/built-in.o :=  rm -f drivers/block/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/block/built-in.o drivers/block/blk-uclass.o drivers/block/blkcache.o

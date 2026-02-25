@@ -1,8 +1,0 @@
-drivers/gpio/omap_gpio.c:286:12:omap_gpio_probe	40	static
-drivers/gpio/omap_gpio.c:304:12:omap_gpio_bind	24	static
-drivers/gpio/omap_gpio.c:249:12:omap_gpio_get_value	8	static
-drivers/gpio/omap_gpio.c:237:12:omap_gpio_direction_output	16	static
-drivers/gpio/omap_gpio.c:226:12:omap_gpio_direction_input	8	static
-drivers/gpio/omap_gpio.c:267:12:omap_gpio_get_function	8	static
-drivers/gpio/omap_gpio.c:257:12:omap_gpio_set_value	16	static
-drivers/gpio/omap_gpio.c:45:5:gpio_is_valid	0	static

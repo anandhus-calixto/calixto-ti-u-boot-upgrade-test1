@@ -1,1 +1,0 @@
-cmd_drivers/mtd/mtd.o := rm -f drivers/mtd/mtd.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT drivers/mtd/mtd.o drivers/mtd/mtdcore.o drivers/mtd/mtd_uboot.o drivers/mtd/mtdpart.o

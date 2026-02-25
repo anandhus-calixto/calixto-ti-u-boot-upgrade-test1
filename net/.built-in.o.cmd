@@ -1,1 +1,0 @@
-cmd_net/built-in.o :=  rm -f net/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT net/built-in.o net/arp.o net/bootp.o net/net.o net/ping.o net/tftp.o net/eth-uclass.o net/eth_bootdev.o net/eth_common.o net/net-common.o

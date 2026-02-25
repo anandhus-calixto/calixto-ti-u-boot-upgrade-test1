@@ -1,1 +1,0 @@
-cmd_spl/lib/crypto/built-in.o :=  rm -f spl/lib/crypto/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/lib/crypto/built-in.o

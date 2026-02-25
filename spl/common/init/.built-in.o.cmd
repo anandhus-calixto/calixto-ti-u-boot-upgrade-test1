@@ -1,1 +1,0 @@
-cmd_spl/common/init/built-in.o :=  rm -f spl/common/init/built-in.o; /media/drive_b/anandhu/ti/linux-devkit/sysroots/x86_64-arago-linux/usr/bin/arm-oe-linux-gnueabi/arm-oe-linux-gnueabi-ar cDPrsT spl/common/init/built-in.o spl/common/init/board_init.o

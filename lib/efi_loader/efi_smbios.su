@@ -1,2 +1,0 @@
-lib/efi_loader/efi_smbios.c:58:12:install_smbios_table	8	static
-lib/efi_loader/efi_smbios.c:31:14:efi_smbios_register	16	static

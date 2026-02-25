@@ -1,1 +1,0 @@
-arch/arm/dts/am335x-boneblack-wireless.dtb: arch/arm/dts/.am335x-boneblack-wireless.dtb.dts.tmp arch/arm/dts/tps65217.dtsi

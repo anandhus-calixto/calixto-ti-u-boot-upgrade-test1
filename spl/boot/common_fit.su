@@ -1,3 +1,0 @@
-boot/common_fit.c:12:7:fdt_getprop_u32	16	static
-boot/common_fit.c:24:12:board_fit_config_name_match	0	static
-boot/common_fit.c:34:5:fit_find_config_node	40	static

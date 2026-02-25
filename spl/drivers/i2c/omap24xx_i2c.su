@@ -1,8 +1,0 @@
-drivers/i2c/omap24xx_i2c.c:222:12:wait_for_bb	32	static
-drivers/i2c/omap24xx_i2c.c:254:12:wait_for_event	32	static
-drivers/i2c/omap24xx_i2c.c:284:13:flush_fifo	16	static
-drivers/i2c/omap24xx_i2c.c:1117:12:omap_i2c_probe_chip	32	static
-drivers/i2c/omap24xx_i2c.c:304:12:__omap24_i2c_setspeed	32	static
-drivers/i2c/omap24xx_i2c.c:1107:12:omap_i2c_set_bus_speed	8	static
-drivers/i2c/omap24xx_i2c.c:1126:12:omap_i2c_probe	56	static
-drivers/i2c/omap24xx_i2c.c:1062:12:omap_i2c_xfer	56	static

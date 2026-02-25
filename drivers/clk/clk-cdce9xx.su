@@ -1,6 +1,0 @@
-drivers/clk/clk-cdce9xx.c:88:12:cdce9xx_clk_request	8	static
-drivers/clk/clk-cdce9xx.c:62:12:cdce9xx_reg_read	16	static
-drivers/clk/clk-cdce9xx.c:75:12:cdce9xx_reg_write	16	static
-drivers/clk/clk-cdce9xx.c:98:12:cdce9xx_clk_probe	56	static
-drivers/clk/clk-cdce9xx.c:175:14:cdce9xx_clk_set_rate	40	static
-drivers/clk/clk-cdce9xx.c:163:14:cdce9xx_clk_get_rate	24	static

@@ -34,6 +34,8 @@
 #include <asm/gpio.h>
 #include <asm/omap_common.h>
 #include <asm/omap_mmc.h>
+#include <omap3_spi.h>
+#include <spi.h>
 #include <i2c.h>
 #include <miiphy.h>
 #include <cpsw.h>
@@ -47,6 +49,8 @@
 #include "board.h"
 
 DECLARE_GLOBAL_DATA_PTR;
+
+
 
 static struct ctrl_dev *cdev = (struct ctrl_dev *)CTRL_DEVICE_BASE;
 
@@ -274,7 +278,10 @@ int board_late_init(void)
 }
 #endif
 
+
+
 /* CPSW plat */
+
 #if (CONFIG_IS_ENABLED(NET) || CONFIG_IS_ENABLED(NET_LWIP)) && \
     !CONFIG_IS_ENABLED(OF_CONTROL)
 struct cpsw_slave_data slave_data[] = {
@@ -319,6 +326,7 @@ U_BOOT_DRVINFO(am335x_eth) = {
 };
 #endif
 
+
 #ifdef CONFIG_SPL_LOAD_FIT
 int board_fit_config_name_match(const char *name)
 {
@@ -344,7 +352,7 @@ U_BOOT_DRVINFO(am335x_mmc0) = {
 
 static const struct omap_hsmmc_plat am335x_mmc1_plat = {
 	.base_addr = (struct hsmmc *)OMAP_HSMMC2_BASE,
-	.cfg.host_caps = MMC_MODE_HS_52MHz | MMC_MODE_HS | MMC_MODE_8BIT,
+	.cfg.host_caps = MMC_MODE_HS_52MHz | MMC_MODE_HS | MMC_MODE_4BIT,
 	.cfg.f_min = 400000,
 	.cfg.f_max = 52000000,
 	.cfg.voltages = MMC_VDD_32_33 | MMC_VDD_33_34 | MMC_VDD_165_195,

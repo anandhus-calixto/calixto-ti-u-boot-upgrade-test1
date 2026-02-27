@@ -359,6 +359,8 @@
 			interrupts = <30>;
 			status = "disabled";
 		};
+		
+		
 
 		mmc1: mmc@48060000 {
 			compatible = "ti,omap4-hsmmc";
@@ -677,6 +679,8 @@
 				dma-names = "tx", "rx";
 			};
 		};
+		
+
 
 		target-module@56000000 {
 			compatible = "ti,sysc-omap4", "ti,sysc";

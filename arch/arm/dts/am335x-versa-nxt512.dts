@@ -8,6 +8,7 @@
 /dts-v1/;
 
 #include "am33xx.dtsi"
+#include "versa-include.dtsi"
 #include <dt-bindings/interrupt-controller/irq.h>
 / {
 	model = "CALIXTO AM335x VERSA-NXT_UBOOT";
@@ -155,6 +156,18 @@
 			AM33XX_PADCONF(AM335X_PIN_MDC, PIN_INPUT_PULLDOWN, MUX_MODE7)
 		>;
 	};
+	
+	
+	
+	spi0_pins_default: spi0_pins_default {
+		pinctrl-single,pins = <
+			AM33XX_IOPAD(0x950, PIN_INPUT_PULLUP | MUX_MODE0) /* (A17) spi0_sclk.spi0_sclk */
+			AM33XX_IOPAD(0x954, PIN_INPUT_PULLUP | MUX_MODE0) /* (B17) spi0_d0.spi0_d0 */
+			AM33XX_IOPAD(0x958, PIN_INPUT_PULLUP | MUX_MODE0) /* (B16) spi0_d1.spi0_d1 */
+			AM33XX_IOPAD(0x95c, PIN_INPUT_PULLUP | MUX_MODE0) /* (A16) spi0_cs0.spi0_cs0 */
+		>;
+	};
+	
 
 };
 
@@ -199,16 +212,15 @@
 	cd-gpios = <&gpio3 14 GPIO_ACTIVE_HIGH>;
 };
 
-&mmc3 {
-	status = "okay";
-	pinctrl-names = "default";
-	pinctrl-0 = <&emmc_pins>;
-        vmmc-supply = <&vmmcsd_fixed>;
-	bus-width = <4>;
-	ti,non-removable;
-	dmas = <&edma_xbar 12 0 1
-                &edma_xbar 13 0 2>;
-        dma-names = "tx", "rx";
+&mmc2 {
+    status = "okay";
+    pinctrl-names = "default";
+    pinctrl-0 = <&emmc_pins>;
+    vmmc-supply = <&vmmcsd_fixed>;
+    bus-width = <4>;
+    ti,non-removable;
+    /* dmas = <&edma_xbar 12 0 1 &edma_xbar 13 0 2>; */
+    /* dma-names = "tx", "rx"; */
 };
 
 &edma {
@@ -238,4 +250,44 @@
 &cpsw_emac1 {
 	phy_id = <&davinci_mdio>, <1>;
 	phy-mode = "rgmii-txid";
+};
+
+
+
+&spi3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi0_pins_default>;
+	status = "okay";
+	
+
+	spi_nor: flash@0 {
+		 #address-cells = <1>;
+		 #size-cells = <1>;
+		 compatible = "winbond,w25q64cv" , "jedec,spi-nor";
+		 spi-max-frequency = <24000000>;
+		 //m25p,fast-read;
+		 reg = <0>;
+
+
+		 partition@0 {
+			 label = "u-boot-spl";
+			 reg = <0x000000 0x80000>;
+		 };
+
+
+		 partition@1 {
+			 label = "u-boot";
+			 reg = <0x80000 0x100000>;
+		 };
+
+		 partition@2 {
+			 label = "env1";
+			 reg = <0x180000 0x20000>;
+		 };
+
+		 partition@3 {
+			 label = "env2";
+			 reg = <0x1A0000 0x660000>;
+		 };
+	};
 };

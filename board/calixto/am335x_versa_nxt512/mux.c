@@ -47,6 +47,18 @@ static struct module_pin_mux spi0_pin_mux[] = {
 	{-1},
 };
 
+#if defined(CONFIG_eMMC)
+static struct module_pin_mux emmc_mmc2_pin_mux[] = {
+        {OFFSET(gpmc_ad15), (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_DAT3 */
+        {OFFSET(gpmc_ad14), (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_DAT2 */
+        {OFFSET(gpmc_ad13), (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_DAT1 */
+        {OFFSET(gpmc_ad12), (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_DAT0 */
+        {OFFSET(gpmc_clk),  (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_CLK */
+        {OFFSET(gpmc_csn3), (MODE(3) | RXACTIVE | PULLUP_EN)},  /* MMC2_CMD */
+        {-1},
+};
+#endif
+
 static struct module_pin_mux rmii1_pin_mux[] = {
 	{OFFSET(mii1_crs), MODE(1) | RXACTIVE},	        /* RMII1_CRS */
 	{OFFSET(mii1_rxerr), MODE(1) | RXACTIVE},		/* RMII1_RXERR */
@@ -92,6 +104,9 @@ void enable_board_pin_mux(void)
         configure_module_pin_mux(rmii1_pin_mux);
         configure_module_pin_mux(spi0_pin_mux);
         configure_module_pin_mux(nand_pin_mux);
+        #if defined(CONFIG_eMMC)
+		configure_module_pin_mux(emmc_mmc2_pin_mux);
+	#endif
 }
 /* CPLD registers */
 #define I2C_CPLD_ADDR	0x35

@@ -26,6 +26,8 @@
 	"bootdir=/boot\0" \
 	"bootfile=zImage\0" \
 	"fdtfile=am335x-calixto-nxt512.dtb\0" \
+	"moduleconfig=csevm\0" \
+        "fdtcustomfile=\0" \
 	"console=ttyO0,115200n8\0" \
 	"optargs=\0" \
 	"mmcdev=0\0" \
@@ -35,6 +37,26 @@
 		"${optargs} " \
 		"root=${mmcroot} " \
 		"rootfstype=${mmcrootfstype}\0" \
+	"rootpath=/export/rootfs\0" \
+	"nfsopts=nolock\0" \
+	"netargs=setenv bootargs console=${console} " \
+		"${optargs} " \
+		"root=/dev/nfs " \
+		"nfsroot=${serverip}:${rootpath},${nfsopts} rw " \
+		"ip=dhcp\0" \
+	"bootenv=uEnv.txt\0" \
+	"loadbootenv=load mmc ${mmcdev} ${loadaddr} ${bootenv}\0" \
+	"importbootenv=echo Importing environment from mmc ...; " \
+		"env import -t $loadaddr $filesize\0" \
+	"reflash_spi=echo Reflashing SPI Flash with New Boot Loader...; " \
+			"mmc rescan; " \
+			"sf probe 0; " \
+			"echo Erasing SPI Boot Sector...; " \
+			"sf erase 0x0 0xC0000; " \
+			"fatload mmc 0 ${loadaddr} MLO.byteswap; " \
+			"sf write ${loadaddr} 0 ${filesize}; " \
+			"fatload mmc 0 ${loadaddr} u-boot.img; " \
+			"sf write ${loadaddr} 0x20000 ${filesize}\0" \
 	"spierase_env=echo removing enviroment settings from SPI flash..; " \
                         "sf probe 0; " \
                         "sf erase 0xA0000 0xC0000\0" \
@@ -63,6 +85,16 @@
                                 "run uenvcmd;" \
                         "fi;" \
                 "fi;\0" \
+        "mmcbootos=mmc dev ${mmcdev}; " \
+                "if mmc rescan; then " \
+                        "echo SD/MMC found on device ${mmcdev};" \
+                        "if run loadimage; then " \
+                                "run mmcloados; " \
+                        "else " \
+                                "echo Running SD Boot using uEnv.txt; " \
+                                "run sdbootenv; " \
+                        "fi;" \
+                "fi;\0" \
         "emmcbootos=" \
                 "if run loadimage; then " \
                         "run mmcloados; " \
@@ -70,10 +102,20 @@
                         "echo Running SD Boot using uEnv.txt; " \
                         "run sdbootenv; " \
                 "fi;\0" \
-	"bootcmd_mmc=echo Booting from sd ...; "\
+	"ramargs=setenv bootargs console=${console} ip=dhcp rw\0" \
+	"bootcmd_mmc=echo Booting from SD Card ...; "\
 		"setenv mmcdev 0;" \
 		"setenv bootpart 0:2;" \
-	        "setenv mmcroot /dev/mmcblk0p2;" \
+		"setenv mmcroot /dev/mmcblk0p2;" \
+        	"run mmcbootos;\0" \
+	"bootcmd_emmc=echo Booting from eMMC ...; "\
+		"setenv mmcdev 1;" \
+		"setenv bootpart 1:2;" \
+                "if mmc rescan; then " \
+			"setenv mmcroot /dev/mmcblk1p2;" \
+                "else " \
+			"setenv mmcroot /dev/mmcblk0p2;" \
+                "fi;" \
         	"run emmcbootos;\0" \
 	"boot_targets=" \
 		"mmc " \
@@ -91,6 +133,69 @@
 #define CFG_SYS_NS16550_COM4		0x481a6000	/* UART3 */
 #define CFG_SYS_NS16550_COM5		0x481a8000	/* UART4 */
 #define CFG_SYS_NS16550_COM6		0x481aa000	/* UART5 */
+
+
+/* SPI flash. */
+//#define CONFIG_SPL_SPI_SUPPORT
+//#define CONFIG_SPL_SPI_FLASH_SUPPORT
+//#define CONFIG_SPL_SPI_LOAD
+#define CONFIG_SPL_SPI_BUS		0
+
+
+  // CHECK HERERERERERERE
+// name changed due to undeclaration
+//#define CONFIG_SPL_SPI_CS		0
+#define CONFIG_ENV_SPI_CS 		0
+
+//#define CONFIG_SYS_SPI_U_BOOT_OFFS	0x20000
+
+
+
+
+
+/*
+ * Default to using SPI for environment, etc.
+ * 0x000000 - 0x020000 : SPL (128KiB)
+ * 0x020000 - 0x0A0000 : U-Boot (512KiB)
+ * 0x0A0000 - 0x0AFFFF : First copy of U-Boot Environment (64KiB)
+ * 0x0B0000 - 0x0BFFFF : Second copy of U-Boot Environment (64KiB)
+ */
+//#if (defined(CONFIG_SPI_FLASH) || defined(CONFIG_SPI_BOOT))
+//#define CONFIG_ENV_IS_IN_SPI_FLASH
+//#define CONFIG_ENV_SPI_MAX_HZ		CONFIG_SF_DEFAULT_SPEED
+//#define CONFIG_ENV_SECT_SIZE		(0x10000) /* 64 KB sectors */
+
+
+
+
+ //  CHECK HERERERERERERE
+   
+// name changed due to undeclaration
+//#define CONFIG_ENV_OFFSET		(0xA0000) /* 768 KiB in */
+//#define CONFIG_ENV_ADDR			(0xA0000) /* 768 KiB in */
+
+//#define CONFIG_ENV_OFFSET_REDUND	(0xB0000) /* 896 KiB in */
+
+
+
+//#endif
+
+
+/* SPI flash. */
+
+
+#if defined(FLASH_TYPE_SST)
+	#define CONFIG_SPI_FLASH_SST
+#endif
+#if defined(FLASH_TYPE_MACRONIX)
+	#define CONFIG_SPI_FLASH_MACRONIX
+#endif
+#if defined(FLASH_TYPE_WINBOND)
+	#define CONFIG_SPI_FLASH_WINBOND
+#endif
+
+
+
 
 #ifdef CONFIG_MTD_RAW_NAND
 /* NAND: device related configs */

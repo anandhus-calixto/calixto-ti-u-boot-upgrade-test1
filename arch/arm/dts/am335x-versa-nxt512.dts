@@ -264,10 +264,17 @@
 	spi_nor: flash@0 {
 		 #address-cells = <1>;
 		 #size-cells = <1>;
-		 compatible = "winbond,w25q64cv" , "jedec,spi-nor";
-		 spi-max-frequency = <24000000>;
+		 compatible = "winbond,w25q64cv";
+		 //compatible = "winbond,w25q64cv" , "jedec,spi-nor";
+		 //spi-max-frequency = <24000000>;
 		 //m25p,fast-read;
 		 reg = <0>;
+		 
+		 spi-max-frequency = <25000000>;
+   		 spi-tx-bus-width = <1>;
+   		 spi-rx-bus-width = <1>;
+   		 spi-cpol;
+   		 spi-cpha;
 		 
 
 

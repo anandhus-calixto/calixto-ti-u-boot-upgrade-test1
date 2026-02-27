@@ -84,6 +84,7 @@ static int spl_spi_load_image(struct spl_image_info *spl_image,
 		//puts("SPI probe failed. DEBUGG!!!\n");
 		return -ENODEV;
 	}
+	puts("SPI probe pass!!.\n");
 
 	spl_load_init(&load, spl_spi_fit_read, flash, 1);
 

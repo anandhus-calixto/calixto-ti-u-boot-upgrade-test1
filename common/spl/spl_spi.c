@@ -8,6 +8,8 @@
  * Heiko Schocher, DENX Software Engineering, hs@denx.de.
  */
 
+#define DEBUG
+#define LOG_DEBUG
 #include <config.h>
 #include <image.h>
 #include <imx_container.h>
@@ -20,6 +22,7 @@
 #include <asm/global_data.h>
 #include <asm/io.h>
 #include <dm/ofnode.h>
+
 
 static ulong spl_spi_fit_read(struct spl_load_info *load, ulong sector,
 			      ulong count, void *buf)
@@ -72,8 +75,13 @@ static int spl_spi_load_image(struct spl_image_info *spl_image,
 	flash = spi_flash_probe(sf_bus, sf_cs,
 				CONFIG_SF_DEFAULT_SPEED,
 				CONFIG_SF_DEFAULT_MODE);
+
+	printf("sf_bus %d | sf_cs %d | CONFIG_SF_DEFAULT_SPEED %d | CONFIG_SF_DEFAULT_MODE %d \n",sf_bus, sf_cs,
+				CONFIG_SF_DEFAULT_SPEED,
+				CONFIG_SF_DEFAULT_MODE);
 	if (!flash) {
 		puts("SPI probe failed.\n");
+		//puts("SPI probe failed. DEBUGG!!!\n");
 		return -ENODEV;
 	}
 

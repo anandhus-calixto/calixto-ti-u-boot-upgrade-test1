@@ -258,6 +258,7 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&spi0_pins_default>;
 	status = "okay";
+	u-boot,dm-spl;
 	
 
 	spi_nor: flash@0 {
@@ -267,6 +268,7 @@
 		 spi-max-frequency = <24000000>;
 		 //m25p,fast-read;
 		 reg = <0>;
+		 
 
 
 		 partition@0 {

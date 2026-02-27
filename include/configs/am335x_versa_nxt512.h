@@ -136,9 +136,9 @@
 
 
 /* SPI flash. */
-//#define CONFIG_SPL_SPI_SUPPORT
+#define CONFIG_SPL_SPI_SUPPORT
 //#define CONFIG_SPL_SPI_FLASH_SUPPORT
-//#define CONFIG_SPL_SPI_LOAD
+//define CONFIG_SPL_SPI_LOAD
 #define CONFIG_SPL_SPI_BUS		0
 
 
@@ -163,7 +163,7 @@
 //#if (defined(CONFIG_SPI_FLASH) || defined(CONFIG_SPI_BOOT))
 //#define CONFIG_ENV_IS_IN_SPI_FLASH
 //#define CONFIG_ENV_SPI_MAX_HZ		CONFIG_SF_DEFAULT_SPEED
-//#define CONFIG_ENV_SECT_SIZE		(0x10000) /* 64 KB sectors */
+#define CONFIG_ENV_SECT_SIZE		(0x10000) /* 64 KB sectors */
 
 
 

@@ -2,6 +2,7 @@
 #include <dt-bindings/pinctrl/am33xx.h>
 #include <dt-bindings/clock/am3.h>
 
+
 / {
 	compatible = "ti,am33xx";
 	interrupt-parent = <&intc>;
@@ -12,7 +13,8 @@
 	aliases {
 		spi0 = &spi3;
 	};
-	spi3: spi@48030000 {
+	
+		spi3: spi@48030000 {
 			compatible = "ti,omap4-mcspi";
 			#address-cells = <1>;
 			#size-cells = <0>;

@@ -8,6 +8,8 @@
 /dts-v1/;
 
 #include "am33xx.dtsi"
+#include "am33xx-clocks.dtsi"
+#include "am33xx-l4.dtsi"
 #include "versa-include.dtsi"
 #include <dt-bindings/interrupt-controller/irq.h>
 / {
@@ -252,9 +254,8 @@
 	phy-mode = "rgmii-txid";
 };
 
-
-
-&spi3 {
+/*
+&spi0 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&spi0_pins_default>;
 	status = "okay";
@@ -264,8 +265,59 @@
 	spi_nor: flash@0 {
 		 #address-cells = <1>;
 		 #size-cells = <1>;
-		 compatible = "winbond,w25q64cv";
-		 //compatible = "winbond,w25q64cv" , "jedec,spi-nor";
+		 //compatible = "winbond,w25q64cv";
+		 compatible = "winbond,w25q64cv" , "jedec,spi-nor";
+		 //spi-max-frequency = <24000000>;
+		 //m25p,fast-read;
+		 reg = <0>;
+		//clocks = <&l4ls_clkctrl AM3_L4LS_SPI0_CLKCTRL 0>;
+		//clock-names = "fck";
+		 
+		 spi-max-frequency = <25000000>;
+   		 spi-tx-bus-width = <1>;
+   		 spi-rx-bus-width = <1>;
+   		 spi-cpol;
+   		 spi-cpha;
+		 
+
+
+		 partition@0 {
+			 label = "u-boot-spl";
+			 reg = <0x000000 0x80000>;
+		 };
+
+
+		 partition@1 {
+			 label = "u-boot";
+			 reg = <0x80000 0x100000>;
+		 };
+
+		 partition@2 {
+			 label = "env1";
+			 reg = <0x180000 0x20000>;
+		 };
+
+		 partition@3 {
+			 label = "env2";
+			 reg = <0x1A0000 0x660000>;
+		 };
+	};
+};
+*/
+
+
+&spi3 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&spi0_pins_default>;
+	status = "okay";
+	//u-boot,dm-spl;
+	
+
+	spi_nor: flash@0 {
+		 #address-cells = <1>;
+		 #size-cells = <1>;
+		 //compatible = "winbond,w25q64cv";
+		 compatible = "winbond,w25q64cv" , "jedec,spi-nor";
 		 //spi-max-frequency = <24000000>;
 		 //m25p,fast-read;
 		 reg = <0>;
@@ -300,3 +352,4 @@
 		 };
 	};
 };
+

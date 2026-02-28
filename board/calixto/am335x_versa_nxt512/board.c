@@ -34,8 +34,8 @@
 #include <asm/gpio.h>
 #include <asm/omap_common.h>
 #include <asm/omap_mmc.h>
-//#include <omap3_spi.h>
-//#include <spi.h>
+#include <omap3_spi.h>
+#include <spi.h>
 #include <i2c.h>
 #include <miiphy.h>
 #include <cpsw.h>

@@ -89,7 +89,6 @@ static const struct cmd_control ddr3_calixto_nxt_cmd_ctrl_data = {
 };
 
 
-
 #if defined(CONFIG_1024DDR3)
 static struct emif_regs ddr3_calixto1024_emif_reg_data = {
         .sdram_config = CALIXTO1024_DDR3_EMIF_SDCFG,
@@ -125,6 +124,7 @@ static struct emif_regs ddr3_calixto256_emif_reg_data = {
         .emif_ddr_phy_ctlr_1 = CALIXTO256_DDR3_EMIF_READ_LATENCY,
 };
 #endif
+
 /************************************************************************/
 
 #ifdef CONFIG_SPL_OS_BOOT
@@ -189,7 +189,7 @@ const struct ctrl_ioregs ioregs_calixto_nxt = {
 
 void sdram_init(void)
 {
- #if defined(CONFIG_512DDR3)
+#if defined(CONFIG_512DDR3)
 	config_ddr(303, &ioregs_calixto_nxt, &ddr3_calixto_nxt_data,
 		   	&ddr3_calixto_nxt_cmd_ctrl_data, &ddr3_calixto512_emif_reg_data, 0);
 #elif defined(CONFIG_256DDR3)
@@ -200,6 +200,7 @@ void sdram_init(void)
 			&ddr3_calixto_nxt_cmd_ctrl_data, &ddr3_calixto1024_emif_reg_data, 0);
 #endif
 }
+
 #endif
 
 #if defined(CONFIG_OF_BOARD_SETUP) && defined(CONFIG_OF_CONTROL) && \
@@ -242,6 +243,8 @@ return 0;
 #ifdef CONFIG_BOARD_LATE_INIT
 int board_late_init(void)
 {
+
+
 	struct udevice *dev;
 #if !defined(CONFIG_XPL_BUILD)
 	uint8_t mac_addr[6];

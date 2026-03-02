@@ -2,8 +2,8 @@
  * calixto nxt versa 512 test
  */
 
-#ifndef __CONFIG_AM335X_STAMP_NXT_H
-#define __CONFIG_AM335X_STAMP_NXT_H
+#ifndef __CONFIG_IOT_GATEWAY_ROSELLA_H
+#define __CONFIG_IOT_GATEWAY_ROSELLA_H
 
 #include <configs/ti_am335x_common.h>
 #include <linux/sizes.h>
@@ -25,7 +25,7 @@
 	"bootpart=0:2\0" \
 	"bootdir=/boot\0" \
 	"bootfile=zImage\0" \
-	"fdtfile=am335x-calixto-stamp-nxt.dtb\0" \
+	"fdtfile=iot-gateway-rosella.dtb\0" \
 	"moduleconfig=csevm\0" \
         "fdtcustomfile=\0" \
 	"console=ttyO0,115200n8\0" \

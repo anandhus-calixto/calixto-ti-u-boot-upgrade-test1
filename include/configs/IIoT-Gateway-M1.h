@@ -2,8 +2,8 @@
  * calixto nxt versa 512 test
  */
 
-#ifndef __CONFIG_AM335X_VERSA_NXT512_H
-#define __CONFIG_AM335X_VERSA_NXT512_H
+#ifndef __CONFIG_IIOT_GATEWAY_M1_H
+#define __CONFIG_IIOT_GATEWAY_M1_H
 
 #include <configs/ti_am335x_common.h>
 #include <linux/sizes.h>
@@ -25,7 +25,7 @@
 	"bootpart=0:2\0" \
 	"bootdir=/boot\0" \
 	"bootfile=zImage\0" \
-	"fdtfile=am335x-calixto-nxt512.dtb\0" \
+	"fdtfile=iiot-gateway-m1.dtb\0" \
 	"moduleconfig=csevm\0" \
         "fdtcustomfile=\0" \
 	"console=ttyO0,115200n8\0" \

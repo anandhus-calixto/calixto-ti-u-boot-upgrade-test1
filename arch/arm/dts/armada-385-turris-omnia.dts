@@ -494,6 +494,16 @@
 	};
 };
 
+&l4_wkup {
+	bootph-all;
+	segment@0 {
+		bootph-all;
+		target-module@30000 {
+			bootph-all;
+		};
+	};
+};
+
 &spi0 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&spi0_pins &spi0cs0_pins>;

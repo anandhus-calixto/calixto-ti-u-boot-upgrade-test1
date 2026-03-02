@@ -1,0 +1,29 @@
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/pinctrl/am33xx.h>
+#include <dt-bindings/clock/am3.h>
+
+/ {
+	compatible = "ti,am33xx";
+	interrupt-parent = <&intc>;
+	#address-cells = <1>;
+	#size-cells = <1>;
+	chosen { };
+};
+
+&spi0_target {
+    bootph-all; /* u-boot,dm-spl is the legacy propoerty */
+};
+
+&spi0 {
+    bootph-pre-ram;
+    status = "okay";
+
+    flash@0 {
+        bootph-pre-ram;
+        compatible = "winbond,w25q64cv", "jedec,spi-nor";
+        reg = <0>;
+        spi-max-frequency = <25000000>;
+        spi-cpol;
+        spi-cpha;
+    };
+};

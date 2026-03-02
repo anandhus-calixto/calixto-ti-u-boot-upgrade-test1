@@ -1,7 +1,7 @@
-if TARGET_AM335X_VERSA_NXT512
+if TARGET_AM335X_VERSA_NXT
 
 config SYS_BOARD
-	default "am335x_versa_nxt512"
+	default "am335x_versa_nxt"
 
 config SYS_VENDOR
 	default "calixto"
@@ -10,7 +10,19 @@ config SYS_SOC
 	default "am33xx"
 
 config SYS_CONFIG_NAME
-	default "am335x_versa_nxt512"
+	default "am335x_versa_nxt"
+	
+config 1024DDR3
+	bool "Using 512MB RAM"
+	default n
+	
+config 512DDR3
+	bool "Using 512MB RAM"
+	default n
+	
+config 256DDR3
+	bool "Using 256MB RAM"
+	default n
 
 config NOR
 	bool "Support for NOR flash"

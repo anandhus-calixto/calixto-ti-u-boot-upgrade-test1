@@ -135,6 +135,7 @@
 #define CFG_SYS_NS16550_COM6		0x481aa000	/* UART5 */
 
 
+
 /* SPI flash. */
 #define CONFIG_SPL_SPI_SUPPORT
 //#define CONFIG_SPL_SPI_FLASH_SUPPORT

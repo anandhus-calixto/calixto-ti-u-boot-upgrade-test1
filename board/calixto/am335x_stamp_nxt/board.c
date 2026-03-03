@@ -273,10 +273,12 @@ int board_late_init(void)
 	mac_addr[5] = (mac_lo & 0xFF00) >> 8;
 
 	if (!env_get("ethaddr")) {
-		printf("<ethaddr> not set. Validating first E-fuse MAC\n");
+		//printf("<ethaddr> not set. Validating first E-fuse MAC\n");
 
 		if (is_valid_ethaddr(mac_addr))
+		{
 			eth_env_set_enetaddr("ethaddr", mac_addr);
+			}
 	}
 
 	mac_lo = readl(&cdev->macid1l);
@@ -290,7 +292,9 @@ int board_late_init(void)
 
 	if (!env_get("eth1addr")) {
 		if (is_valid_ethaddr(mac_addr))
+		{
 			eth_env_set_enetaddr("eth1addr", mac_addr);
+			}
 	}
 
 #endif

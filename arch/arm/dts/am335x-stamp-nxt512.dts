@@ -1,15 +1,24 @@
 /*
- * Copyright (C) 2012 Texas Instruments Incorporated - http://www.ti.com/
+ * Copyright (C) 2020 Calixto Systems Pvt Ltd - http://www.calixto.com/
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 as
  * published by the Free Software Foundation.
  */
-/dts-v1/;
+
+/*
+ * AM335x CALIXTO STAMP EVM
+ * http:// http://www.calixto.co.in/
+ * Modified from am335x-evmsk
+ * Modified by Vipin Vijayan <vipin.v@calixto.in>
+ */
+ 
+  /dts-v1/;
 
 #include "am33xx.dtsi"
 #include "versa-include.dtsi"
 #include <dt-bindings/interrupt-controller/irq.h>
+
 / {
 	model = "CALIXTO AM335x STAMP-NXT_UBOOT";
 	compatible = "calixto,am335x-stamp-nxt", "ti,am335x", "ti,am33xx";
@@ -243,6 +252,7 @@
 	pinctrl-1 = <&davinci_mdio_sleep>;
 	status = "okay";
 };
+
 
 &cpsw_emac0 {
 	phy_id = <&davinci_mdio>, <0>;
